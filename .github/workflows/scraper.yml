@@ -92,13 +92,13 @@ jobs:
               echo "Push OK (attempt $i)"
               exit 0
             fi
-            echo "Push rejected (attempt $i) — retry with fresh master…"
+            echo "Push rejected (attempt $i) â€” retry with fresh masterâ€¦"
             sleep $((i * 3))
           done
           echo "Push failed after retries"
           exit 1
 
-      # Push listings to KV — avoids Cloudflare Pages redeploy (~30s "connection closed" blips).
+      # Push listings to KV â€” avoids Cloudflare Pages redeploy (~30s "connection closed" blips).
       - name: Publish listings to Cloudflare KV
         if: success()
         continue-on-error: true
