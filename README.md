@@ -28,4 +28,5 @@ Ouvre `docs/index.html` ou déploie Pages.
 npx wrangler pages deploy docs --project-name=auditt
 ```
 
-Secrets GitHub : `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`, optionnel `TELEGRAM_*`.
+Secrets GitHub : `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`.
+Telegram désactivé tant que tu n’ajoutes pas un bot **dédié** AudiTT (`TELEGRAM_BOT_TOKEN` + `TELEGRAM_CHAT_ID`).
