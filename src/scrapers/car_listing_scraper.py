@@ -212,6 +212,9 @@ class CarListingScraper(BaseScraper):
         excludes = self.spec.get("link_exclude") or []
         if any(x in href for x in excludes):
             return None
+        link_re = self.spec.get("link_regex")
+        if link_re and not re.search(link_re, href):
+            return None
         if not href.startswith("http"):
             return None
         return href.split("?")[0]

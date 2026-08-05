@@ -26,9 +26,10 @@ SITE_SPECS = {
         "label": "ParuVendu",
         "base_url": "https://www.paruvendu.fr",
         "url_builder": "paruvendu",
-        # Real ads use voiture-occasion paths with city; category pages are excluded below.
+        # Real ads: /a/voiture-occasion/audi/tt/1287878109A1KVVOAUTT
         "link_substr": "/a/voiture-occasion/audi/tt/",
         "link_substrs": ["/a/voiture-occasion/audi/tt/"],
+        "link_regex": r"/a/voiture-occasion/audi/tt/\d{7,}[A-Za-z0-9]+/?$",
         "link_exclude": [],
         "wait_selector": "a[href*='/a/voiture-occasion/audi/tt/']",
         "price_regex": r"\d[\d\s.,]*\s*€|€\s?\d[\d.,]*",
