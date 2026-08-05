@@ -1,4 +1,4 @@
-"""Generate PWA / favicon assets: italic bold TT only."""
+"""Generate PWA / favicon assets: oversized italic TT filling the icon."""
 
 from pathlib import Path
 
@@ -6,10 +6,12 @@ from PIL import Image, ImageDraw, ImageFont
 
 OUT = Path(r"C:\Users\coincoin\Documents\AudiTT\docs")
 FONT_CANDIDATES = [
-    Path(r"C:\Windows\Fonts\arialbi.ttf"),  # Arial Bold Italic — closest common match to Audi TT
+    Path(r"C:\Windows\Fonts\arialbi.ttf"),  # Bold Italic — closest to Audi TT mark
     Path(r"C:\Windows\Fonts\ARIALNBI.TTF"),
-    Path(r"C:\Windows\Fonts\impact.ttf"),
+    Path(r"C:\Windows\Fonts\arialbd.ttf"),
 ]
+BG = (12, 12, 14, 255)
+FG = (255, 255, 255, 255)
 
 
 def load_font(size: int) -> ImageFont.FreeTypeFont | ImageFont.ImageFont:
@@ -19,46 +21,70 @@ def load_font(size: int) -> ImageFont.FreeTypeFont | ImageFont.ImageFont:
     return ImageFont.load_default()
 
 
-def render_tt(
-    size: int,
-    *,
-    fg=(255, 255, 255, 255),
-    bg=(17, 17, 19, 255),
-    scale: float = 0.62,
-) -> Image.Image:
-    img = Image.new("RGBA", (size, size), bg)
-    draw = ImageDraw.Draw(img)
-    font = load_font(int(size * scale))
-    text = "TT"
-    bbox = draw.textbbox((0, 0), text, font=font)
-    tw, th = bbox[2] - bbox[0], bbox[3] - bbox[1]
-    # Optical centering for italic glyphs (lean right)
-    x = (size - tw) / 2 - bbox[0] - size * 0.02
-    y = (size - th) / 2 - bbox[1] - size * 0.04
-    draw.text((x, y), text, font=font, fill=fg)
-    return img
+def render_tt_glyph(font_px: int = 900) -> Image.Image:
+    """Render TT on a transparent canvas large enough for italic overflow."""
+    canvas = Image.new("RGBA", (font_px * 3, font_px * 2), (0, 0, 0, 0))
+    draw = ImageDraw.Draw(canvas)
+    font = load_font(font_px)
+    draw.text((font_px // 2, font_px // 4), "TT", font=font, fill=FG)
+    bbox = canvas.getbbox()
+    if not bbox:
+        raise RuntimeError("TT glyph empty")
+    return canvas.crop(bbox)
+
+
+def place_on_square(glyph: Image.Image, size: int, margin_ratio: float = 0.04) -> Image.Image:
+    """Scale glyph to nearly fill the square (tiny margin for Windows anti-alias)."""
+    out = Image.new("RGBA", (size, size), BG)
+    margin = max(1, int(size * margin_ratio))
+    max_w = size - 2 * margin
+    max_h = size - 2 * margin
+    gw, gh = glyph.size
+    scale = min(max_w / gw, max_h / gh)
+    nw, nh = max(1, int(gw * scale)), max(1, int(gh * scale))
+    scaled = glyph.resize((nw, nh), Image.Resampling.LANCZOS)
+    x = (size - nw) // 2
+    y = (size - nh) // 2
+    out.paste(scaled, (x, y), scaled)
+    return out
+
+
+def write_ico(path: Path, glyph: Image.Image) -> None:
+    sizes = [16, 24, 32, 48, 64, 128, 256]
+    # Tiny sizes: almost no margin so TT stays readable in the taskbar
+    frames = [
+        place_on_square(glyph, s, margin_ratio=0.02 if s <= 32 else 0.04).convert("RGBA")
+        for s in sizes
+    ]
+    frames[-1].save(
+        path,
+        format="ICO",
+        sizes=[(s, s) for s in sizes],
+        append_images=frames[:-1],
+    )
 
 
 def main() -> None:
     OUT.mkdir(parents=True, exist_ok=True)
     font_used = next((p.name for p in FONT_CANDIDATES if p.exists()), "default")
     print("font", font_used)
+    glyph = render_tt_glyph(1000)
+    print("glyph", glyph.size)
 
-    for size, name in [
-        (192, "icon-192.png"),
-        (512, "icon-512.png"),
-        (180, "apple-touch-icon.png"),
-        (32, "favicon-32.png"),
-        (16, "favicon-16.png"),
+    for size, name, margin in [
+        (512, "icon-512.png", 0.04),
+        (192, "icon-192.png", 0.04),
+        (180, "apple-touch-icon.png", 0.04),
+        (48, "favicon-48.png", 0.03),
+        (32, "favicon-32.png", 0.02),
+        (16, "favicon-16.png", 0.02),
+        (192, "icon-maskable-192.png", 0.12),  # safe zone for maskable
+        (512, "icon-maskable-512.png", 0.12),
     ]:
-        render_tt(size).save(OUT / name)
+        place_on_square(glyph, size, margin_ratio=margin).save(OUT / name)
         print("wrote", name)
 
-    for size, name in [(192, "icon-maskable-192.png"), (512, "icon-maskable-512.png")]:
-        render_tt(size, scale=0.52).save(OUT / name)
-        print("wrote", name)
-
-    render_tt(32).save(OUT / "favicon.ico", format="ICO", sizes=[(32, 32)])
+    write_ico(OUT / "favicon.ico", glyph)
     print("wrote favicon.ico")
 
 
