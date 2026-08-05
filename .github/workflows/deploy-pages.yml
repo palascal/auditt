@@ -1,0 +1,35 @@
+name: Deploy dashboard (Cloudflare Pages)
+
+# Deploy UI/config without waiting for the full scraper run.
+on:
+  workflow_dispatch:
+  push:
+    branches: [master]
+    paths:
+      - "docs/**"
+      - "!docs/data/**"
+      - "functions/**"
+      - "wrangler.toml"
+      - ".github/workflows/deploy-pages.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: auditt-pages-deploy
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy docs --project-name=auditt --branch=master --commit-dirty=true

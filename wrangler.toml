@@ -1,0 +1,9 @@
+# Cloudflare Pages — https://developers.cloudflare.com/pages/
+name = "auditt"
+compatibility_date = "2024-09-01"
+pages_build_output_dir = "docs"
+
+[[kv_namespaces]]
+binding = "AUDIT_KV"
+id = "f97d5c9cb30b4b45a064af57102f396a"
+preview_id = "92a7fb716dc14415a047031db03467df"

@@ -1,0 +1,109 @@
+name: AudiTT Scraper
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "*/30 * * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: auditt-scrape
+  # Avoid two scrapes committing listings.json at once (schedule + dispatch)
+  cancel-in-progress: true
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      PYTHONUNBUFFERED: "1"
+      PYTHONIOENCODING: "utf-8"
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Restore scraper state
+        uses: actions/cache/restore@v4
+        with:
+          path: data
+          key: auditt-state-${{ runner.os }}-${{ github.run_id }}
+          restore-keys: |
+            auditt-state-${{ runner.os }}-
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Install Playwright browser
+        run: python -m playwright install --with-deps chromium
+
+      - name: Smoke test listing pages
+        continue-on-error: true
+        run: python -u scripts/smoke_test.py
+
+      - name: Run scraper
+        working-directory: src
+        run: python -u main.py
+
+      - name: Save scraper state
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: data
+          key: auditt-state-${{ runner.os }}-${{ github.run_id }}
+
+      - name: Commit dashboard data
+        if: success()
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # Keep this run's generated JSON; never rebase-merge huge listings files
+          mkdir -p /tmp/auditt-out
+          cp docs/data/listings.json /tmp/auditt-out/
+          cp docs/data/scrape_report.json /tmp/auditt-out/
+          cp docs/data/scrape_config.json /tmp/auditt-out/
+
+          for i in 1 2 3 4 5; do
+            git fetch origin
+            git reset --hard origin/master
+            cp /tmp/auditt-out/listings.json docs/data/listings.json
+            cp /tmp/auditt-out/scrape_report.json docs/data/scrape_report.json
+            cp /tmp/auditt-out/scrape_config.json docs/data/scrape_config.json
+            git add docs/data/listings.json docs/data/scrape_config.json docs/data/scrape_report.json
+            if git diff --staged --quiet; then
+              echo "No listings/config changes vs origin/master"
+              exit 0
+            fi
+            git commit -m "chore: update listings dashboard data"
+            if git push origin HEAD:master; then
+              echo "Push OK (attempt $i)"
+              exit 0
+            fi
+            echo "Push rejected (attempt $i) — retry with fresh master…"
+            sleep $((i * 3))
+          done
+          echo "Push failed after retries"
+          exit 1
+
+      # Push listings to KV — avoids Cloudflare Pages redeploy (~30s "connection closed" blips).
+      - name: Publish listings to Cloudflare KV
+        if: success()
+        continue-on-error: true
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: kv key put --namespace-id=f97d5c9cb30b4b45a064af57102f396a listings_v1 --path=docs/data/listings.json

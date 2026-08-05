@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "year_min": 2006,
+  "year_max": 2010,
+  "engines": ["1.8_tfsi", "2.0_tfsi", "2.0_tdi", "3.2_v6", "tts", "ttrs"],
+  "price_max": 25000,
+  "sites": {
+    "lacentrale": { "enabled": true, "label": "La Centrale" },
+    "leboncoin": { "enabled": true, "label": "Leboncoin" },
+    "autoscout24": { "enabled": true, "label": "AutoScout24" },
+    "paruvendu": { "enabled": true, "label": "ParuVendu" }
+  },
+  "custom_sites": []
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#111111" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="AudiTT" />
+  <title>AudiTT — Annonces</title>
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=20260805a" />
+</head>
+<body>
+  <div class="app-chrome">
+    <header class="top">
+      <div class="brand">
+        <img class="brand-logo" src="logo.png" alt="Audi TT" />
+      </div>
+      <p class="meta" id="updated">Chargement…</p>
+    </header>
+
+    <nav class="tabs" role="tablist">
+      <button class="tab is-active" data-tab="inbox" type="button">Nouvelles</button>
+      <button class="tab" data-tab="followed" type="button">Suivies</button>
+      <button type="button" class="btn-config" id="btn-config" aria-haspopup="dialog" aria-label="Configuration" title="Configuration">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="currentColor" d="M19.14 12.94c.04-.31.06-.63.06-.94s-.02-.63-.06-.94l2.03-1.58a.5.5 0 0 0 .12-.64l-1.92-3.32a.5.5 0 0 0-.6-.22l-2.39.96a7.03 7.03 0 0 0-1.63-.94l-.36-2.54a.5.5 0 0 0-.5-.42h-3.84a.5.5 0 0 0-.5.42l-.36 2.54c-.59.24-1.13.56-1.63.94l-2.39-.96a.5.5 0 0 0-.6.22L2.77 8.84a.5.5 0 0 0 .12.64l2.03 1.58c-.04.31-.06.63-.06.94s.02.63.06.94l-2.03 1.58a.5.5 0 0 0-.12.64l1.92 3.32c.12.22.37.3.6.22l2.39-.96c.5.38 1.04.7 1.63.94l.36 2.54c.05.24.25.42.5.42h3.84c.25 0 .45-.18.5-.42l.36-2.54c.59-.24 1.13-.56 1.63-.94l2.39.96c.23.08.48 0 .6-.22l1.92-3.32a.5.5 0 0 0-.12-.64l-2.03-1.58ZM12 15.6A3.6 3.6 0 1 1 12 8.4a3.6 3.6 0 0 1 0 7.2Z"/>
+        </svg>
+      </button>
+    </nav>
+  </div>
+
+  <main>
+    <p class="empty" id="empty" hidden>Aucune annonce ici.</p>
+    <section class="grid" id="grid" aria-live="polite"></section>
+  </main>
+
+  <div class="config-backdrop" id="config-backdrop" hidden></div>
+  <aside class="config-panel" id="config-panel" role="dialog" aria-labelledby="config-title" aria-modal="true" hidden>
+    <div class="config-head">
+      <div>
+        <p class="eyebrow">Réglages</p>
+        <h2 id="config-title">Configuration</h2>
+      </div>
+      <button type="button" class="icon-close" id="config-close" aria-label="Fermer">×</button>
+    </div>
+
+    <div class="config-body">
+      <nav class="config-tabs" role="tablist" aria-label="Sections config">
+        <button type="button" class="config-tab is-active" data-config-tab="filters" role="tab" aria-selected="true">Filtres</button>
+        <button type="button" class="config-tab" data-config-tab="sites" role="tab" aria-selected="false">Sites</button>
+      </nav>
+
+      <section class="config-panel-pane is-active" data-config-panel="filters">
+        <header class="section-head">
+          <p>Recherche <strong>Audi TT</strong> à la vente uniquement. Ajuste l’année et la motorisation.</p>
+        </header>
+
+        <div class="year-block">
+          <div class="year-labels">
+            <strong>Année modèle</strong>
+            <span id="year-range-label">2006 – 2010</span>
+          </div>
+          <div class="dual-range">
+            <input type="range" id="year-min" min="1998" max="2024" step="1" value="2006" />
+            <input type="range" id="year-max" min="1998" max="2024" step="1" value="2010" />
+          </div>
+          <div class="year-ticks"><span>1998</span><span>2024</span></div>
+        </div>
+
+        <label class="price-field">
+          <strong>Prix max (€)</strong>
+          <input type="number" id="price-max" min="1000" max="200000" step="500" value="25000" />
+        </label>
+
+        <div class="engines-block">
+          <strong>Motorisation (2006–2010)</strong>
+          <p class="hint">Décoche pour exclure. Si le titre n’indique pas le moteur, l’annonce est quand même gardée.</p>
+          <div id="engines-list" class="engines-grid"></div>
+        </div>
+      </section>
+
+      <section class="config-panel-pane" data-config-panel="sites" hidden>
+        <header class="section-head">
+          <h3>Sources</h3>
+          <p>La Centrale, Leboncoin, AutoScout24, ParuVendu.</p>
+        </header>
+        <div id="sites-list" class="sites-grid"></div>
+      </section>
+    </div>
+
+    <div class="config-foot">
+      <p class="config-status" id="config-status"></p>
+      <div class="foot-actions">
+        <button type="button" class="btn-ghost" id="config-reset">Réinitialiser</button>
+        <button type="button" class="btn-primary" id="config-save">Enregistrer</button>
+      </div>
+    </div>
+  </aside>
+
+  <script src="app.js?v=20260805a"></script>
+</body>
+</html>

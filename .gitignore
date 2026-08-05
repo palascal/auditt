@@ -1,0 +1,17 @@
+.env
+src/.env.local
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+
+# Runtime state (generated)
+data/seen_*.json
+data/results.json
+data/outlook_msal_cache.json
+data/imap_msal_cache.json
+data/debug/
+
+# Archives / brouillons locaux
+*.zip
