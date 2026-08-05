@@ -77,12 +77,13 @@ def build_search_url(builder: str, cfg: dict) -> str:
         return "https://www.autoscout24.fr/lst/audi/tt?" + urlencode(params)
 
     if builder == "paruvendu":
-        # Text search with year hints; site structure varies
-        q = quote(f"audi tt {ymin} {ymax}")
-        return (
-            "https://www.paruvendu.fr/a/voiture/audi/tt"
-            f"?prixmax={int(_price_max(cfg))}&annee1={ymin}&annee2={ymax}&q={q}"
-        )
+        # Listing hub for Audi TT occasion (geo links are not individual ads).
+        params = {
+            "prixmax": str(int(_price_max(cfg))),
+            "annee1": str(ymin),
+            "annee2": str(ymax),
+        }
+        return "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/?" + urlencode(params)
 
     raise ValueError(f"Unknown car url builder: {builder}")
 

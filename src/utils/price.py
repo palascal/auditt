@@ -72,5 +72,6 @@ def price_within_max_eur(prix_str: str | None, price_max_eur: float) -> bool:
         return True
     eur = parse_price_eur(prix_str)
     if eur is None:
-        return False
+        # Unknown price (JSON-LD slug without amount): keep if SERP already price-capped
+        return True
     return eur <= price_max_eur
