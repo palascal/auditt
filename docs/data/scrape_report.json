@@ -1,0 +1,88 @@
+{
+  "total_inserted": 0,
+  "total_telegram": 0,
+  "year_min": 2006,
+  "year_max": 2010,
+  "engines": [
+    "1.8_tfsi",
+    "2.0_tfsi",
+    "2.0_tdi",
+    "3.2_v6",
+    "tts",
+    "ttrs"
+  ],
+  "purge": {
+    "before": 0,
+    "after": 0,
+    "removed_sold": 0,
+    "removed_dead": 0,
+    "checked": 0
+  },
+  "sites": [
+    {
+      "site": "autoscout24",
+      "label": "AutoScout24",
+      "jobs": 1,
+      "results": 0,
+      "inserted": 0,
+      "stats": {
+        "seen": 0,
+        "filter": 0,
+        "price": 0,
+        "sold": 0,
+        "skip": 0,
+        "ok": 0
+      },
+      "error": null
+    },
+    {
+      "site": "lacentrale",
+      "label": "La Centrale",
+      "jobs": 1,
+      "results": 0,
+      "inserted": 0,
+      "stats": {
+        "seen": 0,
+        "filter": 0,
+        "price": 0,
+        "sold": 0,
+        "skip": 0,
+        "ok": 0
+      },
+      "error": null
+    },
+    {
+      "site": "leboncoin",
+      "label": "Leboncoin",
+      "jobs": 1,
+      "results": 0,
+      "inserted": 0,
+      "stats": {
+        "seen": 0,
+        "filter": 0,
+        "price": 0,
+        "sold": 0,
+        "skip": 0,
+        "ok": 0
+      },
+      "error": null
+    },
+    {
+      "site": "paruvendu",
+      "label": "ParuVendu",
+      "jobs": 1,
+      "results": 0,
+      "inserted": 0,
+      "stats": {
+        "seen": 0,
+        "filter": 85,
+        "price": 0,
+        "sold": 0,
+        "skip": 0,
+        "ok": 0
+      },
+      "error": null
+    }
+  ],
+  "updated_at": "2026-08-05T14:09:32.153102+00:00"
+}
