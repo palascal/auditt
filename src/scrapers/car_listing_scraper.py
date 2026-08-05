@@ -3,12 +3,15 @@
 from __future__ import annotations
 
 import json
+import os
 import re
 from datetime import datetime, timezone
+from pathlib import Path
 from urllib.parse import unquote, urljoin
 
 from playwright.sync_api import sync_playwright
 
+from config import DATA_DIR
 from scrapers.base_scraper import BaseScraper
 from site_registry import SITE_SPECS
 from utils.filters import (
@@ -268,22 +271,44 @@ class CarListingScraper(BaseScraper):
         )
 
         with sync_playwright() as p:
-            browser = p.chromium.launch(
-                headless=self.headless,
-                args=["--disable-blink-features=AutomationControlled"],
-            )
-            context = browser.new_context(
-                user_agent=_DEFAULT_UA,
-                locale="fr-FR",
-                timezone_id="Europe/Paris",
-                viewport={"width": 1440, "height": 900},
-                extra_http_headers={
-                    "Accept-Language": "fr-FR,fr;q=0.9,en;q=0.8",
-                    "Upgrade-Insecure-Requests": "1",
-                },
-            )
-            context.add_init_script(_STEALTH_JS)
-            page = context.new_page()
+            profile_dir = os.getenv("AUDIT_BROWSER_PROFILE", "").strip()
+            if not profile_dir:
+                default_profile = DATA_DIR / "browser_profile"
+                if default_profile.exists() or self.spec.get("requires_residential"):
+                    profile_dir = str(default_profile)
+
+            launch_args = ["--disable-blink-features=AutomationControlled"]
+            browser = None
+            if profile_dir:
+                Path(profile_dir).mkdir(parents=True, exist_ok=True)
+                context = p.chromium.launch_persistent_context(
+                    user_data_dir=profile_dir,
+                    headless=self.headless,
+                    locale="fr-FR",
+                    timezone_id="Europe/Paris",
+                    viewport={"width": 1440, "height": 900},
+                    user_agent=_DEFAULT_UA,
+                    args=launch_args,
+                    extra_http_headers={
+                        "Accept-Language": "fr-FR,fr;q=0.9,en;q=0.8",
+                    },
+                )
+                context.add_init_script(_STEALTH_JS)
+                page = context.pages[0] if context.pages else context.new_page()
+            else:
+                browser = p.chromium.launch(headless=self.headless, args=launch_args)
+                context = browser.new_context(
+                    user_agent=_DEFAULT_UA,
+                    locale="fr-FR",
+                    timezone_id="Europe/Paris",
+                    viewport={"width": 1440, "height": 900},
+                    extra_http_headers={
+                        "Accept-Language": "fr-FR,fr;q=0.9,en;q=0.8",
+                        "Upgrade-Insecure-Requests": "1",
+                    },
+                )
+                context.add_init_script(_STEALTH_JS)
+                page = context.new_page()
 
             for job in self._jobs:
                 url = job.get("url")
@@ -439,7 +464,10 @@ class CarListingScraper(BaseScraper):
                     self.pending_seen.append(link)
                     self.stats["ok"] += 1
 
-            browser.close()
+            if browser is not None:
+                browser.close()
+            else:
+                context.close()
 
         print(
             f"   OK {self.spec.get('label')}: {self.stats['ok']} ok "

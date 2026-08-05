@@ -103,8 +103,27 @@ def save_runtime_config(data: dict) -> None:
 
 
 def enabled_site_keys(cfg: dict) -> set[str]:
+    import os
+
+    from site_registry import SITE_SPECS
+
     sites = cfg.get("sites") or {}
-    return {k for k, v in sites.items() if (v or {}).get("enabled", True)}
+    enabled = {k for k, v in sites.items() if (v or {}).get("enabled", True)}
+    # GitHub Actions / datacenter: skip DataDome-protected sites
+    if os.getenv("AUDIT_SKIP_RESIDENTIAL", "").strip() in {"1", "true", "yes"}:
+        skipped = {
+            k
+            for k in enabled
+            if (SITE_SPECS.get(k) or {}).get("requires_residential")
+        }
+        if skipped:
+            print(
+                "   ⏭️ Skip sites anti-bot (IP datacenter): "
+                + ", ".join(sorted(skipped))
+                + " — lancer scripts/run_daily_local.ps1 depuis ton PC"
+            )
+        enabled -= skipped
+    return enabled
 
 
 def filter_rows_from_config(cfg: dict) -> list[dict]:

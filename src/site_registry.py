@@ -45,6 +45,8 @@ SITE_SPECS = {
         "link_substrs": ["/auto-occasion-annonce-", "/listing"],
         "wait_selector": "a[href*='auto-occasion-annonce']",
         "price_regex": r"\d[\d\s.,]*\s*€|€\s?\d[\d.,]*",
+        # DataDome blocks GitHub Actions / datacenter IPs — scrape from home PC.
+        "requires_residential": True,
     },
     "leboncoin": {
         "kind": "marketplace",
@@ -57,9 +59,9 @@ SITE_SPECS = {
         "link_substrs": ["/ad/voitures/", "/voitures/"],
         "wait_selector": "a[href*='/ad/voitures/']",
         "price_regex": r"\d[\d\s.,]*\s*€|€\s?\d[\d.,]*",
+        "requires_residential": True,
     },
 }
-
 
 def site_labels() -> dict[str, str]:
     return {k: v.get("label", k) for k, v in SITE_SPECS.items()}

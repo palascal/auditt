@@ -3,7 +3,8 @@ name: AudiTT Scraper
 on:
   workflow_dispatch:
   schedule:
-    - cron: "*/30 * * * *"
+    # Once a day ~08:00 Europe/Paris (06:00 UTC in summer, 07:00 UTC in winter)
+    - cron: "0 6 * * *"
 
 permissions:
   contents: write
@@ -22,6 +23,9 @@ jobs:
       PYTHONIOENCODING: "utf-8"
       TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
       TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      # Datacenter IPs (GitHub) are blocked by DataDome on La Centrale / Leboncoin.
+      # Those sites are scraped from a residential machine (see scripts/run_daily_local.ps1).
+      AUDIT_SKIP_RESIDENTIAL: "1"
 
     steps:
       - name: Checkout

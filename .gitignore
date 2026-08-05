@@ -15,3 +15,7 @@ data/debug/
 
 # Archives / brouillons locaux
 *.zip
+
+data/browser_profile/
+*.html
+
