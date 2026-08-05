@@ -1,6 +1,6 @@
 {
-  "total_inserted": 0,
-  "total_telegram": 0,
+  "total_inserted": 72,
+  "total_telegram": 72,
   "year_min": 2006,
   "year_max": 2010,
   "engines": [
@@ -12,26 +12,27 @@
     "ttrs"
   ],
   "purge": {
-    "before": 0,
-    "after": 0,
+    "before": 72,
+    "after": 58,
     "removed_sold": 0,
-    "removed_dead": 0,
-    "checked": 0
+    "removed_dead": 14,
+    "checked": 40
   },
   "sites": [
     {
       "site": "autoscout24",
       "label": "AutoScout24",
       "jobs": 1,
-      "results": 0,
-      "inserted": 0,
+      "results": 34,
+      "inserted": 34,
       "stats": {
         "seen": 0,
         "filter": 0,
         "price": 0,
         "sold": 0,
         "skip": 0,
-        "ok": 0
+        "ok": 34,
+        "blocked": 0
       },
       "error": null
     },
@@ -47,7 +48,8 @@
         "price": 0,
         "sold": 0,
         "skip": 0,
-        "ok": 0
+        "ok": 0,
+        "blocked": 1
       },
       "error": null
     },
@@ -63,7 +65,8 @@
         "price": 0,
         "sold": 0,
         "skip": 0,
-        "ok": 0
+        "ok": 0,
+        "blocked": 1
       },
       "error": null
     },
@@ -71,18 +74,19 @@
       "site": "paruvendu",
       "label": "ParuVendu",
       "jobs": 1,
-      "results": 0,
-      "inserted": 0,
+      "results": 38,
+      "inserted": 38,
       "stats": {
         "seen": 0,
-        "filter": 85,
+        "filter": 21,
         "price": 0,
         "sold": 0,
         "skip": 0,
-        "ok": 0
+        "ok": 38,
+        "blocked": 0
       },
       "error": null
     }
   ],
-  "updated_at": "2026-08-05T14:09:32.153102+00:00"
+  "updated_at": "2026-08-05T14:20:21.124253+00:00"
 }
