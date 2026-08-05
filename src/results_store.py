@@ -188,3 +188,31 @@ def item_matches_active_filters(item: dict) -> bool:
         engines=FILTERS.get("engines"),
         price_max=FILTERS.get("price_max"),
     )
+
+
+def purge_invalid_site_links() -> dict:
+    """Drop facet/geo pages wrongly saved as ads (esp. ParuVendu)."""
+    import re
+
+    from site_registry import SITE_SPECS
+
+    items = _load_listings()
+    before = len(items)
+    kept = []
+    removed = 0
+    for it in items:
+        site = it.get("site") or ""
+        lien = (it.get("lien") or "").strip()
+        spec = SITE_SPECS.get(site) or {}
+        link_re = spec.get("link_regex")
+        ok = True
+        if site == "paruvendu":
+            if not link_re or not lien or not re.search(link_re, lien):
+                ok = False
+        if ok:
+            kept.append(it)
+        else:
+            removed += 1
+    if removed:
+        _save_listings(kept)
+    return {"before": before, "after": len(kept), "removed_invalid": removed}

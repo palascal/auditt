@@ -5,6 +5,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from results_store import (
     item_matches_active_filters,
     merge_new_listings,
+    purge_invalid_site_links,
     purge_sold_and_dead,
     write_scrape_report,
 )
@@ -145,6 +146,8 @@ def run():
     print("\n🧹 Purge vendus / liens morts…")
     purge = purge_sold_and_dead(max_head_checks=40)
     print(f"   {purge}")
+    invalid = purge_invalid_site_links()
+    print(f"   invalid_links: {invalid}")
 
     write_scrape_report(
         {
