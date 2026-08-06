@@ -3,8 +3,7 @@
 from config import DATA_DIR
 
 # French auto classifieds + marketplaces.
-# Note: lacentrale uses DataDome — often 403 from datacenter IPs (GitHub Actions).
-# Leboncoin: alertes e-mail → IMAP (pas de scrape web).
+# Leboncoin + La Centrale: alertes e-mail → IMAP (pas de scrape web / DataDome).
 SITE_SPECS = {
     "autoscout24": {
         "kind": "marketplace",
@@ -36,18 +35,12 @@ SITE_SPECS = {
         "price_regex": r"\d[\d\s.,]*\s*€|€\s?\d[\d.,]*",
     },
     "lacentrale": {
-        "kind": "marketplace",
-        "scraper": "scrapers.car_listing_scraper.CarListingScraper",
+        # Alertes e-mail → IMAP (comme Leboncoin)
+        "kind": "mail",
+        "scraper": "scrapers.lacentrale_mail_scraper.LacentraleMailScraper",
         "seen_path": DATA_DIR / "seen_lacentrale.json",
         "label": "La Centrale",
         "base_url": "https://www.lacentrale.fr",
-        "url_builder": "lacentrale",
-        "link_substr": "/auto-occasion-annonce-",
-        "link_substrs": ["/auto-occasion-annonce-", "/listing"],
-        "wait_selector": "a[href*='auto-occasion-annonce']",
-        "price_regex": r"\d[\d\s.,]*\s*€|€\s?\d[\d.,]*",
-        # DataDome blocks GitHub Actions / datacenter IPs — scrape from home PC.
-        "requires_residential": True,
     },
     "leboncoin": {
         # Alertes e-mail → IMAP (Gmail, etc.) — pas de scrape web / DataDome

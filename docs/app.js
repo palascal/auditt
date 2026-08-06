@@ -13,7 +13,7 @@ const ENGINE_OPTIONS = [
 
 const SITE_NOTES = {
   leboncoin: "Alertes e-mail (IMAP)",
-  lacentrale: "PC local (anti-bot)",
+  lacentrale: "Alertes e-mail (IMAP)",
   autoscout24: "Cloud",
   paruvendu: "Cloud",
 };

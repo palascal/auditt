@@ -23,12 +23,11 @@ jobs:
       PYTHONIOENCODING: "utf-8"
       TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
       TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-      # Leboncoin via alertes e-mail (IMAP) — même logique que saxbot
+      # Leboncoin + La Centrale via alertes e-mail (IMAP)
       IMAP_EMAIL_ACCOUNT: ${{ secrets.IMAP_EMAIL_ACCOUNT }}
       IMAP_EMAIL_PASSWORD: ${{ secrets.IMAP_EMAIL_PASSWORD }}
       IMAP_SERVER: ${{ secrets.IMAP_SERVER }}
-      # Datacenter IPs (GitHub) are blocked by DataDome on La Centrale.
-      # La Centrale is scraped from a residential machine (see scripts/run_daily_local.ps1).
+      # Legacy flag (no residential sites left in registry)
       AUDIT_SKIP_RESIDENTIAL: "1"
 
     steps:

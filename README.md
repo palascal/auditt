@@ -15,23 +15,23 @@ UI, filtres année/moteur et sites auto restent dans ce repo.
 |------|----------------|------|
 | AutoScout24 | GitHub Actions | OK depuis le cloud |
 | ParuVendu | GitHub Actions | OK depuis le cloud |
-| Leboncoin | GitHub Actions / local | Alertes e-mail → IMAP (pas de scrape web) |
-| La Centrale | **PC local** | DataDome bloque les IP datacenter |
+| Leboncoin | GitHub Actions | Alertes e-mail → IMAP |
+| La Centrale | GitHub Actions | Alertes e-mail → IMAP |
 
-## Anti-bot (1 scrape / jour)
+## Anti-bot
 
-Leboncoin lit les **alertes mail** (IMAP), comme saxbot — plus de DataDome. Pour La Centrale, **une IP box/fibre** reste nécessaire.
+Leboncoin et La Centrale passent par **alertes mail (IMAP)** — plus de DataDome. AutoScout24 / ParuVendu tournent aussi en cloud.
 
-1. **Cloud (automatique)** — cron quotidien `06:00 UTC` : AutoScout24 + ParuVendu + Leboncoin mail (`AUDIT_SKIP_RESIDENTIAL=1` saute La Centrale).
-2. **Maison (recommandé pour La Centrale)** — Task Scheduler une fois par jour :
+1. **Cloud (automatique)** — cron quotidien `06:00 UTC` : les 4 sources (`AUDIT_SKIP_RESIDENTIAL` ne saute plus La Centrale).
+2. **Maison (optionnel)** — Task Scheduler si tu veux tout relancer en local :
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File C:\Users\coincoin\Documents\AudiTT\scripts\run_daily_local.ps1
 ```
 
-Le script utilise un profil Chrome persistant (`data/browser_profile`) pour La Centrale, puis pousse les listings dans Cloudflare KV.
+Ou les deux apps : `scrapekit\scripts\run_both_local.ps1`
 
-Pour Leboncoin : crée une alerte e-mail sur leboncoin.fr (Audi TT 2006–2010) vers la même boîte que `IMAP_EMAIL_ACCOUNT`.
+Pour Leboncoin / La Centrale : crée une alerte e-mail sur le site → même boîte que `IMAP_EMAIL_ACCOUNT`.
 
 ## Config
 
