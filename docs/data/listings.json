@@ -1,7 +1,33 @@
 {
-  "updated_at": "2026-08-05T14:29:07.709786+00:00",
-  "count": 24,
+  "updated_at": "2026-08-06T08:32:02.393720+00:00",
+  "count": 26,
   "items": [
+    {
+      "id": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1293890478A1KVVOAUTT",
+      "site": "paruvendu",
+      "site_label": "ParuVendu",
+      "titre": "Audi TT Coupé 1.8 TFSI - 160 COUPE 2007 . PHASE 2 2010 occasion Brive-la-Gaillarde 19100",
+      "prix": "N/A",
+      "lien": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1293890478A1KVVOAUTT",
+      "image": "https://img.paruvendu.fr/_static_/2026080608/communfo/img/sitemobile/novisu-320x200.jpg",
+      "description": "",
+      "year": 2007,
+      "posted_at": "2026-08-06",
+      "found_at": "2026-08-06T08:31:52.657936+00:00"
+    },
+    {
+      "id": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1290367447A1KVVOAUTT",
+      "site": "paruvendu",
+      "site_label": "ParuVendu",
+      "titre": "Audi TT COUPE 2.0 TFSI 200 S-LINE - Révisé & Garanti 6 MOIS 2008 occasion Bry-sur-Marne 94360",
+      "prix": "N/A",
+      "lien": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1290367447A1KVVOAUTT",
+      "image": "https://img.paruvendu.fr/media_ext/_https_/spidervo.s3.fr-par.scw.cloud/91/ae/L3Bob3Rvcy9iZGEzYjU2MzI2ZDdkNWJiZmRkNmViZGE4NWY5NjBhMi9zdG9ja18xMzAwL2ltYWdlXzM1MDIzNjNfMS5qcGc_MjAyNjA3MjExODAwMzE_rct?func=crop&w=480&gravity=auto",
+      "description": "",
+      "year": 2008,
+      "posted_at": "2026-08-06",
+      "found_at": "2026-08-06T08:31:52.657765+00:00"
+    },
     {
       "id": "https://www.autoscout24.fr/offres/audi-tt-coupe-2-0-tfsi-200-s-line-essence-cat_ma9mo15627-b887d4e6-b12b-4ebd-9a87-e57bb5a50614",
       "site": "autoscout24",
