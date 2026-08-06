@@ -11,6 +11,13 @@ const ENGINE_OPTIONS = [
   { id: "ttrs", label: "TT RS" },
 ];
 
+const SITE_NOTES = {
+  leboncoin: "Alertes e-mail (IMAP)",
+  lacentrale: "PC local (anti-bot)",
+  autoscout24: "Cloud",
+  paruvendu: "Cloud",
+};
+
 const DEFAULT_CONFIG = {
   version: 1,
   year_min: 2006,
@@ -384,10 +391,10 @@ function renderConfigForm() {
 
   const sites = document.getElementById("sites-list");
   sites.innerHTML = Object.entries(state.config.sites || [])
-    .map(
-      ([key, s]) =>
-        `<label class="site-row"><span>${escapeHtml(s.label || key)}</span><span class="switch"><input type="checkbox" data-site="${key}" ${s.enabled !== false ? "checked" : ""}/><span class="slider"></span></span></label>`
-    )
+    .map(([key, s]) => {
+      const note = SITE_NOTES[key] || "";
+      return `<label class="site-row"><span class="site-row-text"><strong>${escapeHtml(s.label || key)}</strong>${note ? `<small>${escapeHtml(note)}</small>` : ""}</span><span class="switch"><input type="checkbox" data-site="${key}" ${s.enabled !== false ? "checked" : ""}/><span class="slider"></span></span></label>`;
+    })
     .join("");
 }
 

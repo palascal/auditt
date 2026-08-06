@@ -23,13 +23,24 @@ jobs:
       PYTHONIOENCODING: "utf-8"
       TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
       TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-      # Datacenter IPs (GitHub) are blocked by DataDome on La Centrale / Leboncoin.
-      # Those sites are scraped from a residential machine (see scripts/run_daily_local.ps1).
+      # Leboncoin via alertes e-mail (IMAP) — même logique que saxbot
+      IMAP_EMAIL_ACCOUNT: ${{ secrets.IMAP_EMAIL_ACCOUNT }}
+      IMAP_EMAIL_PASSWORD: ${{ secrets.IMAP_EMAIL_PASSWORD }}
+      IMAP_SERVER: ${{ secrets.IMAP_SERVER }}
+      # Datacenter IPs (GitHub) are blocked by DataDome on La Centrale.
+      # La Centrale is scraped from a residential machine (see scripts/run_daily_local.ps1).
       AUDIT_SKIP_RESIDENTIAL: "1"
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Checkout scrapekit
+        uses: actions/checkout@v4
+        with:
+          repository: palascal/scrapekit
+          path: scrapekit
+          ref: master
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -47,6 +58,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
+          pip install -e ./scrapekit
           pip install -r requirements.txt
 
       - name: Install Playwright browser

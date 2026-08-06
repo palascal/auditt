@@ -2,29 +2,36 @@
 
 Dashboard Cloudflare Pages + scrape cron GitHub Actions (1×/jour).
 
+Moteur partagé : [`palascal/scrapekit`](https://github.com/palascal/scrapekit) (Leboncoin IMAP, Playwright, store, runner).  
+UI, filtres année/moteur et sites auto restent dans ce repo.
+
+## Secrets GitHub (mêmes valeurs que saxbot pour IMAP / Cloudflare)
+
+`IMAP_EMAIL_ACCOUNT`, `IMAP_EMAIL_PASSWORD`, `IMAP_SERVER`, `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`, `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`
+
 ## Sites
 
 | Site | Où ça tourne | Note |
 |------|----------------|------|
 | AutoScout24 | GitHub Actions | OK depuis le cloud |
 | ParuVendu | GitHub Actions | OK depuis le cloud |
+| Leboncoin | GitHub Actions / local | Alertes e-mail → IMAP (pas de scrape web) |
 | La Centrale | **PC local** | DataDome bloque les IP datacenter |
-| Leboncoin | **PC local** | idem |
 
 ## Anti-bot (1 scrape / jour)
 
-Pas besoin de flooder ni de proxy payant : **une IP box/fibre** passe bien mieux que GitHub Actions.
+Leboncoin lit les **alertes mail** (IMAP), comme saxbot — plus de DataDome. Pour La Centrale, **une IP box/fibre** reste nécessaire.
 
-1. **Cloud (automatique)** — cron quotidien `06:00 UTC` : AutoScout24 + ParuVendu uniquement (`AUDIT_SKIP_RESIDENTIAL=1`).
-2. **Maison (recommandé pour La Centrale / Leboncoin)** — Task Scheduler une fois par jour :
+1. **Cloud (automatique)** — cron quotidien `06:00 UTC` : AutoScout24 + ParuVendu + Leboncoin mail (`AUDIT_SKIP_RESIDENTIAL=1` saute La Centrale).
+2. **Maison (recommandé pour La Centrale)** — Task Scheduler une fois par jour :
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File C:\Users\coincoin\Documents\AudiTT\scripts\run_daily_local.ps1
 ```
 
-Le script utilise un profil Chrome persistant (`data/browser_profile`) puis pousse les listings dans Cloudflare KV.
+Le script utilise un profil Chrome persistant (`data/browser_profile`) pour La Centrale, puis pousse les listings dans Cloudflare KV.
 
-Alternative plus lourde : proxy résidentiel payant branché sur Actions — inutile si le PC tourne déjà 1×/jour.
+Pour Leboncoin : crée une alerte e-mail sur leboncoin.fr (Audi TT 2006–2010) vers la même boîte que `IMAP_EMAIL_ACCOUNT`.
 
 ## Config
 
@@ -43,5 +50,5 @@ python main.py
 npx wrangler pages deploy docs --project-name=auditt
 ```
 
-Secrets GitHub : `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`.
-Telegram désactivé tant que tu n’ajoutes pas un bot **dédié** AudiTT (`TELEGRAM_BOT_TOKEN` + `TELEGRAM_CHAT_ID`).
+Secrets GitHub : `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`, et pour Leboncoin `IMAP_EMAIL_ACCOUNT` / `IMAP_EMAIL_PASSWORD` / `IMAP_SERVER`.
+Telegram : `TELEGRAM_BOT_TOKEN` + `TELEGRAM_CHAT_ID`.

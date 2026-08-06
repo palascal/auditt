@@ -1,2 +1,4 @@
 playwright>=1.40.0
 requests>=2.31.0
+# Shared engine: installed in CI from github.com/palascal/scrapekit
+# Local: sibling Documents/scrapekit via src/_bootstrap.py (or pip install -e ../scrapekit)

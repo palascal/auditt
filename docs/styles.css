@@ -878,3 +878,19 @@ main {
   padding: 0.65rem 0;
   border-bottom: 1px solid var(--line);
 }
+
+.site-row-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.site-row-text strong {
+  font-weight: 600;
+}
+
+.site-row-text small {
+  color: var(--muted);
+  font-size: 0.78rem;
+}

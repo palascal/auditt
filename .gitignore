@@ -19,3 +19,6 @@ data/debug/
 data/browser_profile/
 *.html
 
+# Local copy of scrapekit (prefer sibling Documents/scrapekit + GitHub)
+packages/scrapekit/
+
