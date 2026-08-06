@@ -1,6 +1,6 @@
 {
-  "total_inserted": 2,
-  "total_telegram": 2,
+  "total_inserted": 0,
+  "total_telegram": 0,
   "year_min": 2006,
   "year_max": 2010,
   "engines": [
@@ -37,22 +37,36 @@
       "error": null
     },
     {
+      "site": "leboncoin",
+      "label": "Leboncoin",
+      "jobs": 1,
+      "results": 0,
+      "inserted": 0,
+      "stats": {
+        "seen": 0,
+        "ok": 0,
+        "skip": 0,
+        "filter": 25
+      },
+      "error": null
+    },
+    {
       "site": "paruvendu",
       "label": "ParuVendu",
       "jobs": 1,
-      "results": 2,
-      "inserted": 2,
+      "results": 0,
+      "inserted": 0,
       "stats": {
-        "seen": 4,
+        "seen": 6,
         "filter": 19,
         "price": 0,
         "sold": 0,
         "skip": 0,
-        "ok": 2,
+        "ok": 0,
         "blocked": 0
       },
       "error": null
     }
   ],
-  "updated_at": "2026-08-06T08:32:14.720355+00:00"
+  "updated_at": "2026-08-06T12:11:58.538448+00:00"
 }
