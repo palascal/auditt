@@ -3,13 +3,23 @@
 from __future__ import annotations
 
 import json
-import os
 import re
 from datetime import datetime, timezone
-from pathlib import Path
 from urllib.parse import unquote, urljoin
 
 from playwright.sync_api import sync_playwright
+
+import _bootstrap
+
+_bootstrap.ensure_scrapekit()
+
+from scrapekit.browser import (
+    dismiss_cookies,
+    open_browser_context,
+    page_looks_blocked,
+    resolve_profile_dir,
+)
+from scrapekit.card_price import best_price_from_text, price_to_float
 
 from config import DATA_DIR
 from scrapers.base_scraper import BaseScraper
@@ -23,53 +33,13 @@ from utils.listing_status import is_sold_listing
 from utils.price import price_within_max_eur
 from utils.seen import load_seen
 
-_DEFAULT_UA = (
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
-    "(KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
-)
-
-_STEALTH_JS = """
-Object.defineProperty(navigator, 'webdriver', { get: () => undefined });
-Object.defineProperty(navigator, 'languages', { get: () => ['fr-FR', 'fr', 'en'] });
-Object.defineProperty(navigator, 'plugins', { get: () => [1, 2, 3, 4, 5] });
-window.chrome = { runtime: {} };
-"""
-
 
 def _price_to_float(prix_str: str) -> float | None:
-    if not prix_str:
-        return None
-    raw = prix_str.replace("\xa0", " ").strip()
-    cleaned = re.sub(r"[^\d.,\s]", "", raw)
-    cleaned = re.sub(r"\s+", "", cleaned)
-    if not cleaned:
-        return None
-    if "," in cleaned and "." in cleaned and cleaned.rfind(",") > cleaned.rfind("."):
-        cleaned = cleaned.replace(".", "").replace(",", ".")
-    elif "," in cleaned and "." not in cleaned:
-        cleaned = cleaned.replace(",", ".") if re.search(r",\d{2}$", cleaned) else cleaned.replace(",", "")
-    try:
-        return float(re.findall(r"\d+(?:\.\d+)?", cleaned)[-1])
-    except (IndexError, ValueError):
-        return None
+    return price_to_float(prix_str)
 
 
 def _best_price(blob: str) -> str:
-    matches = re.findall(
-        r"(?<!\d)\d(?:[\s\u00a0]\d{3})+(?:[.,]\d{2})?\s*€"
-        r"|(?<!\d)\d{1,3}(?:[.,]\d{3})+(?:[.,]\d{2})?\s*€"
-        r"|(?<!\d)\d{3,6}\s*€"
-        r"|€\s?\d[\d\s.,]*",
-        blob or "",
-    )
-    scored = []
-    for i, m in enumerate(matches):
-        val = _price_to_float(m)
-        if val is not None and 500 <= val <= 200_000:
-            scored.append((val, i, m.strip()))
-    if scored:
-        return scored[-1][2]
-    return matches[-1].strip() if matches else "N/A"
+    return best_price_from_text(blob, min_val=500, max_val=200_000)
 
 
 def _title_from_slug(path: str) -> str:
@@ -222,45 +192,6 @@ class CarListingScraper(BaseScraper):
             return None
         return href.split("?")[0]
 
-    def _dismiss_cookies(self, page) -> None:
-        for label in (
-            "Tout accepter",
-            "Accepter tout",
-            "Accept all",
-            "Accepter",
-            "J'accepte",
-            "Agree",
-            "OK",
-        ):
-            try:
-                btn = page.get_by_role("button", name=re.compile(label, re.I))
-                if btn.count():
-                    btn.first.click(timeout=1500)
-                    page.wait_for_timeout(500)
-            except Exception:
-                pass
-
-    def _page_blocked(self, page, status: int | None) -> bool:
-        if status in {403, 429, 503}:
-            return True
-        try:
-            title = (page.title() or "").lower()
-            body = (page.inner_text("body") or "")[:800].lower()
-        except Exception:
-            return status == 403
-        needles = (
-            "datadome",
-            "captcha",
-            "access denied",
-            "unusual traffic",
-            "vérifiez que vous êtes",
-            "please verify",
-            "just a moment",
-            "cf-browser-verification",
-        )
-        blob = title + " " + body
-        return any(n in blob for n in needles)
-
     def fetch_listings(self):
         seen = self._load_seen()
         results = []
@@ -271,44 +202,23 @@ class CarListingScraper(BaseScraper):
         )
 
         with sync_playwright() as p:
-            profile_dir = os.getenv("AUDIT_BROWSER_PROFILE", "").strip()
-            if not profile_dir:
-                default_profile = DATA_DIR / "browser_profile"
-                if default_profile.exists() or self.spec.get("requires_residential"):
-                    profile_dir = str(default_profile)
-
-            launch_args = ["--disable-blink-features=AutomationControlled"]
-            browser = None
-            if profile_dir:
-                Path(profile_dir).mkdir(parents=True, exist_ok=True)
-                context = p.chromium.launch_persistent_context(
-                    user_data_dir=profile_dir,
-                    headless=self.headless,
-                    locale="fr-FR",
-                    timezone_id="Europe/Paris",
-                    viewport={"width": 1440, "height": 900},
-                    user_agent=_DEFAULT_UA,
-                    args=launch_args,
-                    extra_http_headers={
-                        "Accept-Language": "fr-FR,fr;q=0.9,en;q=0.8",
-                    },
-                )
-                context.add_init_script(_STEALTH_JS)
-                page = context.pages[0] if context.pages else context.new_page()
-            else:
-                browser = p.chromium.launch(headless=self.headless, args=launch_args)
-                context = browser.new_context(
-                    user_agent=_DEFAULT_UA,
-                    locale="fr-FR",
-                    timezone_id="Europe/Paris",
-                    viewport={"width": 1440, "height": 900},
-                    extra_http_headers={
-                        "Accept-Language": "fr-FR,fr;q=0.9,en;q=0.8",
-                        "Upgrade-Insecure-Requests": "1",
-                    },
-                )
-                context.add_init_script(_STEALTH_JS)
-                page = context.new_page()
+            profile_dir = resolve_profile_dir(
+                env_keys=("AUDIT_BROWSER_PROFILE", "SCRAPEKIT_BROWSER_PROFILE"),
+                data_dir=DATA_DIR,
+                requires_residential=bool(self.spec.get("requires_residential")),
+            )
+            browser, context, page = open_browser_context(
+                p,
+                headless=self.headless,
+                profile_dir=profile_dir,
+                locale="fr-FR",
+                timezone_id="Europe/Paris",
+                viewport={"width": 1440, "height": 900},
+                extra_http_headers={
+                    "Accept-Language": "fr-FR,fr;q=0.9,en;q=0.8",
+                    "Upgrade-Insecure-Requests": "1",
+                },
+            )
 
             for job in self._jobs:
                 url = job.get("url")
@@ -323,7 +233,7 @@ class CarListingScraper(BaseScraper):
                     resp = page.goto(url, wait_until="domcontentloaded", timeout=60000)
                     status = resp.status if resp else None
                     page.wait_for_timeout(2500)
-                    self._dismiss_cookies(page)
+                    dismiss_cookies(page)
                     page.wait_for_timeout(1500)
                     try:
                         page.wait_for_selector(wait_sel, timeout=10000)
@@ -333,7 +243,7 @@ class CarListingScraper(BaseScraper):
                     print(f"   ⚠️ {self.spec.get('label')}: navigation {e}")
                     continue
 
-                if self._page_blocked(page, status):
+                if page_looks_blocked(page, status):
                     self.stats["blocked"] += 1
                     print(
                         f"   🚫 {self.spec.get('label')}: bloqué anti-bot "

@@ -1,5 +1,6 @@
 # AudiTT — scrape quotidien depuis ton PC (IP résidentielle).
-# Contourne DataDome sur La Centrale / Leboncoin sans flooder (1x/jour).
+# Contourne DataDome sur La Centrale sans flooder (1x/jour).
+# Leboncoin passe par IMAP (alertes mail) — voir IMAP_* dans src/.env.local.
 #
 # Prérequis: Python 3.11+, pip install -r requirements.txt, playwright install chromium
 #

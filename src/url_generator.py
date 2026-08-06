@@ -103,6 +103,22 @@ def generate_site_batches(runtime_cfg: dict | None = None):
             print(f"   ⏸️  {spec.get('label', site)} désactivé (config)")
             out[site] = []
             continue
+        kind = spec.get("kind")
+        if kind == "mail":
+            url = f"mail://{site}"
+            out[site] = [
+                {
+                    "url": url,
+                    "price_max": price_max,
+                    "keywords": ["audi", "tt"],
+                    "year_min": ymin,
+                    "year_max": ymax,
+                    "engines": engines,
+                    "apply_filters": True,
+                }
+            ]
+            print(f"   📧 {spec.get('label', site)}: {url} (IMAP)")
+            continue
         builder = spec.get("url_builder")
         url = build_search_url(builder, cfg)
         out[site] = [

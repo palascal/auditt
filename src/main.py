@@ -1,6 +1,14 @@
-import importlib
-import traceback
-from concurrent.futures import ThreadPoolExecutor, as_completed
+"""AudiTT scrape entrypoint — product config + scrapekit runner."""
+
+from __future__ import annotations
+
+from functools import partial
+
+import _bootstrap
+
+_bootstrap.ensure_scrapekit()
+
+from scrapekit.runner import run_parallel, scrape_one
 
 from results_store import (
     item_matches_active_filters,
@@ -11,54 +19,9 @@ from results_store import (
 )
 from runtime_config import load_runtime_config, save_runtime_config
 from site_registry import SITE_SPECS, apply_custom_sites, site_labels
-from utils.seen import commit_seen
 from utils.telegram import send_telegram_message
 
 MAX_WORKERS = 3
-
-
-def load_scraper(path, **kwargs):
-    module_name, class_name = path.rsplit(".", 1)
-    module = importlib.import_module(module_name)
-    return getattr(module, class_name)(**kwargs)
-
-
-def _scrape_one(site: str, spec: dict, jobs: list) -> dict:
-    label = spec.get("label", site)
-    out = {
-        "site": site,
-        "label": label,
-        "jobs": len(jobs),
-        "results": 0,
-        "inserted": 0,
-        "telegram": 0,
-        "stats": {},
-        "error": None,
-        "new_items": [],
-    }
-    if not jobs:
-        return out
-    try:
-        kwargs = {
-            "site_key": site,
-            "query_jobs": jobs,
-            "headless": True,
-        }
-        scraper = load_scraper(spec["scraper"], **kwargs)
-        results = scraper.fetch_listings() or []
-        out["results"] = len(results)
-        out["stats"] = dict(getattr(scraper, "stats", {}) or {})
-        inserted_items = merge_new_listings(site, label, results)
-        out["inserted"] = len(inserted_items)
-        out["new_items"] = inserted_items
-        pending = list(getattr(scraper, "pending_seen", []) or [])
-        seen_path = spec.get("seen_path")
-        if seen_path and pending:
-            commit_seen(seen_path, pending)
-    except Exception as e:
-        out["error"] = str(e)
-        traceback.print_exc()
-    return out
 
 
 def run():
@@ -97,51 +60,35 @@ def run():
             continue
         work.append((site, spec, jobs))
 
-    site_reports = []
+    scrape_fn = partial(scrape_one, merge_fn=merge_new_listings)
+    site_reports = run_parallel(
+        work, max_workers=MAX_WORKERS, scrape_fn=scrape_fn, site_specs=SITE_SPECS
+    )
+
     total_telegram = 0
     total_inserted = 0
-
-    print(f"\n🧵 Parallel scrape ({min(MAX_WORKERS, max(1, len(work)))} workers)…")
-    with ThreadPoolExecutor(max_workers=min(MAX_WORKERS, max(1, len(work)))) as pool:
-        futures = {
-            pool.submit(_scrape_one, site, spec, jobs): site
-            for site, spec, jobs in work
-        }
-        for fut in as_completed(futures):
-            site = futures[fut]
-            try:
-                report = fut.result()
-            except Exception as e:
-                report = {
-                    "site": site,
-                    "label": SITE_SPECS.get(site, {}).get("label", site),
-                    "error": str(e),
-                    "inserted": 0,
-                    "new_items": [],
-                    "stats": {},
-                }
-            site_reports.append(report)
-            label = report.get("label", site)
-            if report.get("error"):
-                print(f"⚠️ Erreur {label}: {report['error']}")
+    for report in site_reports:
+        label = report.get("label", report.get("site"))
+        if report.get("error"):
+            print(f"⚠️ Erreur {label}: {report['error']}")
+            continue
+        print(
+            f"✅ {label}: {report.get('results', 0)} scrapées / "
+            f"{report.get('inserted', 0)} ajoutées | stats={report.get('stats')}"
+        )
+        for item in report.get("new_items") or []:
+            if not item_matches_active_filters(item):
                 continue
-            print(
-                f"✅ {label}: {report.get('results', 0)} scrapées / "
-                f"{report.get('inserted', 0)} ajoutées | stats={report.get('stats')}"
+            year = item.get("year") or ""
+            message = (
+                f"🆕 <b>{label}</b>\n"
+                f"📌 {item.get('titre', 'Audi TT')}\n"
+                f"📅 {year} · 💰 {item.get('prix', 'N/A')}\n"
+                f"🔗 {item.get('lien', '')}"
             )
-            for item in report.get("new_items") or []:
-                if not item_matches_active_filters(item):
-                    continue
-                year = item.get("year") or ""
-                message = (
-                    f"🆕 <b>{label}</b>\n"
-                    f"📌 {item.get('titre', 'Audi TT')}\n"
-                    f"📅 {year} · 💰 {item.get('prix', 'N/A')}\n"
-                    f"🔗 {item.get('lien', '')}"
-                )
-                send_telegram_message(message)
-                total_telegram += 1
-            total_inserted += int(report.get("inserted") or 0)
+            send_telegram_message(message)
+            total_telegram += 1
+        total_inserted += int(report.get("inserted") or 0)
 
     print("\n🧹 Purge vendus / liens morts…")
     purge = purge_sold_and_dead(max_head_checks=40)

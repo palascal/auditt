@@ -1,6 +1,12 @@
 import os
 from pathlib import Path
 
+import _bootstrap
+
+_bootstrap.ensure_scrapekit()
+
+from scrapekit.env import imap_settings, load_env_file
+
 ROOT = Path(__file__).resolve().parent.parent
 LOCAL_ENV_PATH = Path(__file__).resolve().parent / ".env.local"
 
@@ -14,23 +20,7 @@ ENGINE_OPTIONS = [
     {"id": "ttrs", "label": "TT RS", "patterns": ["tt rs", "ttrs", "tt-rs", "2.5"]},
 ]
 
-
-def _load_local_env_file():
-    if not LOCAL_ENV_PATH.exists():
-        return
-    for raw_line in LOCAL_ENV_PATH.read_text(encoding="utf-8").splitlines():
-        line = raw_line.strip().replace("\ufeff", "")
-        if not line or line.startswith("#") or "=" not in line:
-            continue
-        key, value = line.split("=", 1)
-        key = key.strip()
-        value = value.strip().strip('"').strip("'")
-        cur = os.environ.get(key)
-        if cur is None or (isinstance(cur, str) and not cur.strip()):
-            os.environ[key] = value
-
-
-_load_local_env_file()
+load_env_file(LOCAL_ENV_PATH)
 
 DATA_DIR = Path(os.environ.get("AUDIT_DATA_DIR", str(ROOT / "data")))
 DATA_DIR.mkdir(parents=True, exist_ok=True)
@@ -39,6 +29,14 @@ LISTINGS_JSON_PATH = ROOT / "docs" / "data" / "listings.json"
 
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
 TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "")
+
+_imap = imap_settings()
+IMAP_EMAIL_ACCOUNT = _imap["account"]
+IMAP_EMAIL_PASSWORD = _imap["password"]
+IMAP_SERVER = _imap["server"]
+IMAP_PORT = _imap["port"]
+IMAP_MAILBOX = _imap["mailbox"]
+IMAP_MAX_EMAILS = _imap["max_emails"]
 
 FILTERS = {
     "year_min": 2006,

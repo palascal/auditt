@@ -1,16 +1,15 @@
-import requests
+"""Telegram — project config tokens + scrapekit sender."""
+
+from __future__ import annotations
+
+import _bootstrap
+
+_bootstrap.ensure_scrapekit()
+
+from scrapekit.telegram import send_telegram_message as _send
 
 from config import TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID
 
 
 def send_telegram_message(message: str) -> None:
-    if not TELEGRAM_BOT_TOKEN or not TELEGRAM_CHAT_ID:
-        print("ℹ️ Telegram non configuré (TELEGRAM_*), notification ignorée.")
-        return
-    url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
-    data = {
-        "chat_id": TELEGRAM_CHAT_ID,
-        "text": message,
-        "parse_mode": "HTML",
-    }
-    requests.post(url, data=data, timeout=20)
+    _send(message, token=TELEGRAM_BOT_TOKEN, chat_id=TELEGRAM_CHAT_ID)

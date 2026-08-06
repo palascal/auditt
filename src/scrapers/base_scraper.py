@@ -1,8 +1,11 @@
-from abc import ABC, abstractmethod
+"""Base scraper ABC — re-export from scrapekit."""
 
+from __future__ import annotations
 
-class BaseScraper(ABC):
-    @abstractmethod
-    def fetch_listings(self):
-        """Return list of dicts: titre, prix, lien."""
-        raise NotImplementedError
+import _bootstrap
+
+_bootstrap.ensure_scrapekit()
+
+from scrapekit.base import BaseScraper  # noqa: E402,F401
+
+__all__ = ["BaseScraper"]

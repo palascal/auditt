@@ -3,7 +3,8 @@
 from config import DATA_DIR
 
 # French auto classifieds + marketplaces.
-# Note: lacentrale / leboncoin use DataDome — often 403 from datacenter IPs (GitHub Actions).
+# Note: lacentrale uses DataDome — often 403 from datacenter IPs (GitHub Actions).
+# Leboncoin: alertes e-mail → IMAP (pas de scrape web).
 SITE_SPECS = {
     "autoscout24": {
         "kind": "marketplace",
@@ -49,17 +50,12 @@ SITE_SPECS = {
         "requires_residential": True,
     },
     "leboncoin": {
-        "kind": "marketplace",
-        "scraper": "scrapers.car_listing_scraper.CarListingScraper",
+        # Alertes e-mail → IMAP (Gmail, etc.) — pas de scrape web / DataDome
+        "kind": "mail",
+        "scraper": "scrapers.leboncoin_mail_scraper.LeboncoinMailScraper",
         "seen_path": DATA_DIR / "seen_leboncoin.json",
         "label": "Leboncoin",
         "base_url": "https://www.leboncoin.fr",
-        "url_builder": "leboncoin",
-        "link_substr": "/ad/voitures/",
-        "link_substrs": ["/ad/voitures/", "/voitures/"],
-        "wait_selector": "a[href*='/ad/voitures/']",
-        "price_regex": r"\d[\d\s.,]*\s*€|€\s?\d[\d.,]*",
-        "requires_residential": True,
     },
 }
 
