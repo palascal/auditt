@@ -1,4 +1,4 @@
-"""Generic listing scraper — AudiTT thin wrapper (unused by car sites today)."""
+"""Generic listing scraper — AudiTT thin wrapper around scrapekit."""
 
 from __future__ import annotations
 
@@ -14,9 +14,11 @@ from utils.filters import listing_matches_filters
 
 
 class GenericListingScraper(_KitGeneric):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, site_key: str, query_jobs=None, **kwargs):
+        # daily/full mode (max_results, scroll, early-stop) from scrapekit.scrape_mode
         super().__init__(
-            *args,
+            site_key,
+            query_jobs=query_jobs,
             site_specs=SITE_SPECS,
             match_fn=listing_matches_filters,
             data_dir=DATA_DIR,

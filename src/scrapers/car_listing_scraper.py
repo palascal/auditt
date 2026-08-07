@@ -20,6 +20,7 @@ from scrapekit.browser import (
     resolve_profile_dir,
 )
 from scrapekit.card_price import best_price_from_text, price_to_float
+from scrapekit.scrape_mode import early_stop_seen, max_results_for
 
 from config import DATA_DIR
 from scrapers.base_scraper import BaseScraper
@@ -144,7 +145,7 @@ class CarListingScraper(BaseScraper):
         query_jobs=None,
         url=None,
         headless=True,
-        max_results=50,
+        max_results=None,
         **_kwargs,
     ):
         if site_key not in SITE_SPECS:
@@ -158,7 +159,10 @@ class CarListingScraper(BaseScraper):
         else:
             self._jobs = []
         self.headless = headless
-        self.max_results = max_results
+        self.max_results = (
+            max_results_for(site_key) if max_results is None else max_results
+        )
+        self.early_stop_seen = early_stop_seen()
         self.cache_file = str(self.spec["seen_path"])
         self.pending_seen: list[str] = []
         self.stats = {
@@ -324,13 +328,24 @@ class CarListingScraper(BaseScraper):
                     except Exception:
                         self.stats["skip"] += 1
 
+                consecutive_seen = 0
                 for cand in candidates:
                     if len(results) >= self.max_results:
                         break
                     link = cand["lien"]
                     if link in seen:
                         self.stats["seen"] += 1
+                        consecutive_seen += 1
+                        if (
+                            self.early_stop_seen
+                            and consecutive_seen >= self.early_stop_seen
+                        ):
+                            print(
+                                f"   ⛔ {consecutive_seen} déjà vus d'affilée → fin de page"
+                            )
+                            break
                         continue
+                    consecutive_seen = 0
                     title = cand.get("titre") or _title_from_slug(link)
                     card_text = cand.get("card_text") or title
                     prix = cand.get("prix") or _best_price(card_text)
@@ -373,7 +388,7 @@ class CarListingScraper(BaseScraper):
                     results.append(item)
                     self.pending_seen.append(link)
                     self.stats["ok"] += 1
-
+                    seen.add(link)
             if browser is not None:
                 browser.close()
             else:

@@ -9,6 +9,7 @@ import _bootstrap
 _bootstrap.ensure_scrapekit()
 
 from scrapekit.runner import run_parallel, scrape_one
+from scrapekit.scrape_mode import get_scrape_mode, purge_head_checks
 
 from results_store import (
     item_matches_active_filters,
@@ -25,7 +26,8 @@ MAX_WORKERS = 3
 
 
 def run():
-    print("\n⚙️  Chargement config Audi TT…")
+    mode = get_scrape_mode()
+    print(f"\n⚙️  Chargement config Audi TT… (mode={mode})")
     cfg = load_runtime_config(site_labels())
     apply_custom_sites(cfg.get("custom_sites") or [])
 
@@ -90,14 +92,16 @@ def run():
             total_telegram += 1
         total_inserted += int(report.get("inserted") or 0)
 
-    print("\n🧹 Purge vendus / liens morts…")
-    purge = purge_sold_and_dead(max_head_checks=40)
+    checks = purge_head_checks()
+    print(f"\n🧹 Purge vendus / liens morts (max {checks})…")
+    purge = purge_sold_and_dead(max_head_checks=checks)
     print(f"   {purge}")
     invalid = purge_invalid_site_links()
     print(f"   invalid_links: {invalid}")
 
     write_scrape_report(
         {
+            "scrape_mode": mode,
             "total_inserted": total_inserted,
             "total_telegram": total_telegram,
             "year_min": config_mod.FILTERS.get("year_min"),
@@ -120,7 +124,7 @@ def run():
     )
 
     print(
-        f"🏁 Terminé: {total_inserted} ajoutées au dashboard, "
+        f"🏁 Terminé ({mode}): {total_inserted} ajoutées au dashboard, "
         f"{total_telegram} alertes Telegram."
     )
 

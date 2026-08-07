@@ -2,8 +2,17 @@ name: AudiTT Scraper
 
 on:
   workflow_dispatch:
+    inputs:
+      scrape_mode:
+        description: "daily (léger/incrémental) ou full"
+        required: false
+        default: "daily"
+        type: choice
+        options:
+          - daily
+          - full
   schedule:
-    # Once a day ~08:00 Europe/Paris (06:00 UTC in summer, 07:00 UTC in winter)
+    # Once a day ~08:00 Europe/Paris (06:00 UTC in summer)
     - cron: "0 6 * * *"
 
 permissions:
@@ -11,8 +20,7 @@ permissions:
 
 concurrency:
   group: auditt-scrape
-  # Avoid two scrapes committing listings.json at once (schedule + dispatch)
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   scrape:
@@ -21,13 +29,12 @@ jobs:
     env:
       PYTHONUNBUFFERED: "1"
       PYTHONIOENCODING: "utf-8"
+      SCRAPE_MODE: ${{ github.event.inputs.scrape_mode || 'daily' }}
       TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
       TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-      # Leboncoin + La Centrale via alertes e-mail (IMAP)
       IMAP_EMAIL_ACCOUNT: ${{ secrets.IMAP_EMAIL_ACCOUNT }}
       IMAP_EMAIL_PASSWORD: ${{ secrets.IMAP_EMAIL_PASSWORD }}
       IMAP_SERVER: ${{ secrets.IMAP_SERVER }}
-      # Legacy flag (no residential sites left in registry)
       AUDIT_SKIP_RESIDENTIAL: "1"
 
     steps:
