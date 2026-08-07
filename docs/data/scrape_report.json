@@ -1,6 +1,6 @@
 {
-  "total_inserted": 0,
-  "total_telegram": 0,
+  "total_inserted": 8,
+  "total_telegram": 8,
   "year_min": 2006,
   "year_max": 2010,
   "engines": [
@@ -12,11 +12,11 @@
     "ttrs"
   ],
   "purge": {
-    "before": 26,
-    "after": 26,
+    "before": 48,
+    "after": 34,
     "removed_sold": 0,
-    "removed_dead": 0,
-    "checked": 26
+    "removed_dead": 14,
+    "checked": 40
   },
   "sites": [
     {
@@ -37,8 +37,8 @@
       "error": null
     },
     {
-      "site": "leboncoin",
-      "label": "Leboncoin",
+      "site": "lacentrale",
+      "label": "La Centrale",
       "jobs": 1,
       "results": 0,
       "inserted": 0,
@@ -46,7 +46,21 @@
         "seen": 0,
         "ok": 0,
         "skip": 0,
-        "filter": 25
+        "filter": 2
+      },
+      "error": null
+    },
+    {
+      "site": "leboncoin",
+      "label": "Leboncoin",
+      "jobs": 1,
+      "results": 5,
+      "inserted": 5,
+      "stats": {
+        "seen": 0,
+        "ok": 5,
+        "skip": 0,
+        "filter": 5
       },
       "error": null
     },
@@ -54,19 +68,19 @@
       "site": "paruvendu",
       "label": "ParuVendu",
       "jobs": 1,
-      "results": 0,
-      "inserted": 0,
+      "results": 3,
+      "inserted": 3,
       "stats": {
-        "seen": 6,
-        "filter": 19,
+        "seen": 5,
+        "filter": 17,
         "price": 0,
         "sold": 0,
         "skip": 0,
-        "ok": 0,
+        "ok": 3,
         "blocked": 0
       },
       "error": null
     }
   ],
-  "updated_at": "2026-08-06T12:11:58.538448+00:00"
+  "updated_at": "2026-08-07T07:12:17.558630+00:00"
 }
