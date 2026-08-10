@@ -13,10 +13,10 @@
     "ttrs"
   ],
   "purge": {
-    "before": 53,
-    "after": 52,
+    "before": 59,
+    "after": 59,
     "removed_sold": 0,
-    "removed_dead": 1,
+    "removed_dead": 0,
     "checked": 40
   },
   "sites": [
@@ -24,15 +24,15 @@
       "site": "autoscout24",
       "label": "AutoScout24",
       "jobs": 1,
-      "results": 0,
-      "inserted": 0,
+      "results": 1,
+      "inserted": 1,
       "stats": {
         "seen": 8,
         "filter": 0,
         "price": 0,
         "sold": 0,
         "skip": 0,
-        "ok": 0,
+        "ok": 1,
         "blocked": 0
       },
       "error": null
@@ -58,10 +58,10 @@
       "results": 5,
       "inserted": 5,
       "stats": {
-        "seen": 10,
+        "seen": 15,
         "ok": 5,
         "skip": 0,
-        "filter": 15
+        "filter": 20
       },
       "error": null
     },
@@ -69,19 +69,19 @@
       "site": "paruvendu",
       "label": "ParuVendu",
       "jobs": 1,
-      "results": 2,
-      "inserted": 2,
+      "results": 1,
+      "inserted": 1,
       "stats": {
-        "seen": 0,
-        "filter": 23,
+        "seen": 2,
+        "filter": 22,
         "price": 0,
         "sold": 0,
         "skip": 0,
-        "ok": 2,
+        "ok": 1,
         "blocked": 0
       },
       "error": null
     }
   ],
-  "updated_at": "2026-08-09T06:52:54.841618+00:00"
+  "updated_at": "2026-08-10T07:28:54.224062+00:00"
 }
