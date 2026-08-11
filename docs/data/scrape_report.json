@@ -1,7 +1,7 @@
 {
   "scrape_mode": "daily",
-  "total_inserted": 7,
-  "total_telegram": 7,
+  "total_inserted": 1,
+  "total_telegram": 1,
   "year_min": 2006,
   "year_max": 2010,
   "engines": [
@@ -13,8 +13,8 @@
     "ttrs"
   ],
   "purge": {
-    "before": 59,
-    "after": 59,
+    "before": 60,
+    "after": 60,
     "removed_sold": 0,
     "removed_dead": 0,
     "checked": 40
@@ -24,15 +24,15 @@
       "site": "autoscout24",
       "label": "AutoScout24",
       "jobs": 1,
-      "results": 1,
-      "inserted": 1,
+      "results": 0,
+      "inserted": 0,
       "stats": {
         "seen": 8,
         "filter": 0,
         "price": 0,
         "sold": 0,
         "skip": 0,
-        "ok": 1,
+        "ok": 0,
         "blocked": 0
       },
       "error": null
@@ -47,7 +47,7 @@
         "seen": 0,
         "ok": 0,
         "skip": 0,
-        "filter": 7
+        "filter": 8
       },
       "error": null
     },
@@ -55,11 +55,11 @@
       "site": "leboncoin",
       "label": "Leboncoin",
       "jobs": 1,
-      "results": 5,
-      "inserted": 5,
+      "results": 0,
+      "inserted": 0,
       "stats": {
         "seen": 15,
-        "ok": 5,
+        "ok": 0,
         "skip": 0,
         "filter": 20
       },
@@ -83,5 +83,5 @@
       "error": null
     }
   ],
-  "updated_at": "2026-08-10T07:28:54.224062+00:00"
+  "updated_at": "2026-08-11T07:03:27.123404+00:00"
 }

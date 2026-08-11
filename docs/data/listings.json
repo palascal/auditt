@@ -1,7 +1,20 @@
 {
-  "updated_at": "2026-08-10T07:28:20.876274+00:00",
-  "count": 59,
+  "updated_at": "2026-08-11T07:03:04.145320+00:00",
+  "count": 60,
   "items": [
+    {
+      "id": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1292963276A1KVVOAUTT",
+      "site": "paruvendu",
+      "site_label": "ParuVendu",
+      "titre": "Audi TT II (MK2) 2.0 TFSI 200 ch S-TRONIC 2009 occasion Juillan 65290",
+      "prix": "N/A",
+      "lien": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1292963276A1KVVOAUTT",
+      "image": "https://img.paruvendu.fr/media_ext/_https_/d2runzreg8rdhh.cloudfront.net/9e/e9/L3ZlaGljbGUtcGhvdG9zLzEwNzcxOTA4L0lNR184MjY2LkpQRz8yMDI2MDgxMDE3MzYzMw_rct?func=crop&w=480&gravity=auto",
+      "description": "",
+      "found_at": "2026-08-11T07:02:26.015557+00:00",
+      "year": 2009,
+      "posted_at": "2026-08-11"
+    },
     {
       "id": "https://www.autoscout24.fr/offres/audi-tt-coupe-v6-3-2-250-quattro-s-line-s-tronic-a-essence-cat_ma9mo15627-c026989c-8802-4181-941e-95347b41c21d",
       "site": "autoscout24",
