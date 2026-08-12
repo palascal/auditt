@@ -1,7 +1,20 @@
 {
-  "updated_at": "2026-08-11T07:03:04.145320+00:00",
-  "count": 60,
+  "updated_at": "2026-08-12T07:21:35.354078+00:00",
+  "count": 61,
   "items": [
+    {
+      "id": "https://www.autoscout24.fr/offres/audi-tt-roadster-1-8-t-163ch-design-edition-ii-2006-garantie-essence-noir-cat_ma9mo15627-33365041-5076-4beb-b5ed-ea27eb7241f3",
+      "site": "autoscout24",
+      "site_label": "AutoScout24",
+      "titre": "Audi TT ROADSTER 1.8 T 163CH DESIGN EDITION II * 2006 * GARANTIE",
+      "prix": "N/A",
+      "lien": "https://www.autoscout24.fr/offres/audi-tt-roadster-1-8-t-163ch-design-edition-ii-2006-garantie-essence-noir-cat_ma9mo15627-33365041-5076-4beb-b5ed-ea27eb7241f3",
+      "image": "",
+      "description": "",
+      "found_at": "2026-08-12T07:21:09.650046+00:00",
+      "year": 2006,
+      "posted_at": "2026-08-12"
+    },
     {
       "id": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1292963276A1KVVOAUTT",
       "site": "paruvendu",
