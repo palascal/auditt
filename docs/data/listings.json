@@ -1,7 +1,59 @@
 {
-  "updated_at": "2026-08-12T07:21:35.354078+00:00",
-  "count": 61,
+  "updated_at": "2026-08-13T07:23:43.105094+00:00",
+  "count": 65,
   "items": [
+    {
+      "id": "https://www.autoscout24.fr/offres/audi-tt-coupe-2-0-tfsi-200-essence-cat_ma9mo15627-5768e5fe-77a4-4f26-b6d6-46395d27efcd",
+      "site": "autoscout24",
+      "site_label": "AutoScout24",
+      "titre": "Audi TT COUPE 2.0 TFSI 200",
+      "prix": "N/A",
+      "lien": "https://www.autoscout24.fr/offres/audi-tt-coupe-2-0-tfsi-200-essence-cat_ma9mo15627-5768e5fe-77a4-4f26-b6d6-46395d27efcd",
+      "image": "",
+      "description": "",
+      "found_at": "2026-08-13T07:23:11.334605+00:00",
+      "year": null,
+      "posted_at": "2026-08-13"
+    },
+    {
+      "id": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1293682977A1KVVOAUTT",
+      "site": "paruvendu",
+      "site_label": "ParuVendu",
+      "titre": "Audi TT 3.2 V6 250 QUARO S-TRONIC - SELLERIE CUIR CHAUFFANT - PACK 2006 occasion Montlouis sur Loire 37270",
+      "prix": "N/A",
+      "lien": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1293682977A1KVVOAUTT",
+      "image": "https://img.paruvendu.fr/media_ext/_https_/www.autoeasy.fr/55/0a/L3dhdGVybWFyay12by8xNjMzNzg4LmpwZz8yMDI2MDgwOTEzNTgwOA_rct?func=crop&w=480&gravity=auto",
+      "description": "",
+      "found_at": "2026-08-13T07:23:02.506191+00:00",
+      "year": 2006,
+      "posted_at": "2026-08-13"
+    },
+    {
+      "id": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1294162174A1KVVOAUTT",
+      "site": "paruvendu",
+      "site_label": "ParuVendu",
+      "titre": "Audi TT II COUPE 2.0 TFSI 200 2007 occasion Vernon 27200",
+      "prix": "N/A",
+      "lien": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1294162174A1KVVOAUTT",
+      "image": "https://img.paruvendu.fr/media_ext/_https_/api.sayspilot360.fr/ec/ba/L3N0b3JhZ2UvYWdlbmNpZXMvNDMvdmVoaWNsZXMvMjEzNi9waG90b3Mvb3JpZ2luYWwvaW1nLTg1MTYuanBnPzIwMjYwODEyMjAxODA5_rct?func=crop&w=480&gravity=auto",
+      "description": "",
+      "found_at": "2026-08-13T07:23:02.506127+00:00",
+      "year": 2007,
+      "posted_at": "2026-08-13"
+    },
+    {
+      "id": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1294180090A1KVVOAUTT",
+      "site": "paruvendu",
+      "site_label": "ParuVendu",
+      "titre": "Audi TT 2.0 TFSI 200CH 2010 occasion Boulazac Isle Manoire 24750",
+      "prix": "N/A",
+      "lien": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1294180090A1KVVOAUTT",
+      "image": "https://img.paruvendu.fr/media_ext/_https_/www.autoeasy.fr/fd/da/L3dhdGVybWFyay12by8xNjQ3NDgyLmpwZz8yMDI2MDgxMzA4NDAwOQ_rct?func=crop&w=480&gravity=auto",
+      "description": "",
+      "found_at": "2026-08-13T07:23:02.505890+00:00",
+      "year": 2010,
+      "posted_at": "2026-08-13"
+    },
     {
       "id": "https://www.autoscout24.fr/offres/audi-tt-roadster-1-8-t-163ch-design-edition-ii-2006-garantie-essence-noir-cat_ma9mo15627-33365041-5076-4beb-b5ed-ea27eb7241f3",
       "site": "autoscout24",
