@@ -1,7 +1,59 @@
 {
-  "updated_at": "2026-08-14T07:21:12.942523+00:00",
-  "count": 71,
+  "updated_at": "2026-08-15T06:35:00.571562+00:00",
+  "count": 75,
   "items": [
+    {
+      "id": "https://www.autoscout24.fr/offres/audi-tt-coupe-2-0-tdi-170-dpf-quattro-diesel-gris-cat_ma9mo15627-cf862794-d752-4452-b0b8-7bfaa99abcce",
+      "site": "autoscout24",
+      "site_label": "AutoScout24",
+      "titre": "Audi TT Coupé 2.0 TDI 170 DPF Quattro",
+      "prix": "N/A",
+      "lien": "https://www.autoscout24.fr/offres/audi-tt-coupe-2-0-tdi-170-dpf-quattro-diesel-gris-cat_ma9mo15627-cf862794-d752-4452-b0b8-7bfaa99abcce",
+      "image": "",
+      "description": "",
+      "found_at": "2026-08-15T06:33:16.538298+00:00",
+      "year": null,
+      "posted_at": "2026-08-15"
+    },
+    {
+      "id": "https://www.autoscout24.fr/offres/audi-tt-tt-roadster-1-8-tfsi-86895-km-essence-blanc-cat_ma9mo15627-335bf2fa-b7da-41c6-8b0e-926fd0b0c810",
+      "site": "autoscout24",
+      "site_label": "AutoScout24",
+      "titre": "Audi TT TT Roadster 1.8 TFSI  86895 km !!",
+      "prix": "N/A",
+      "lien": "https://www.autoscout24.fr/offres/audi-tt-tt-roadster-1-8-tfsi-86895-km-essence-blanc-cat_ma9mo15627-335bf2fa-b7da-41c6-8b0e-926fd0b0c810",
+      "image": "",
+      "description": "",
+      "found_at": "2026-08-15T06:33:16.538205+00:00",
+      "year": null,
+      "posted_at": "2026-08-15"
+    },
+    {
+      "id": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1293049142A1KVVOAUTT",
+      "site": "paruvendu",
+      "site_label": "ParuVendu",
+      "titre": "Audi TT COUPE 2.0 TFSI 200 S-LINE 2008 occasion Saint-Étienne-de-Saint-Geoirs 38590",
+      "prix": "N/A",
+      "lien": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1293049142A1KVVOAUTT",
+      "image": "https://img.paruvendu.fr/media_ext/_https_/d2runzreg8rdhh.cloudfront.net/fa/ad/L3ZlaGljbGUtcGhvdG9zLzk4MTI1NzIvMTAwMDAxNzc2MS5qcGc_MjAyNjA4MDUxNzM2Mjc_rct?func=crop&w=480&gravity=auto",
+      "description": "",
+      "found_at": "2026-08-15T06:33:07.015263+00:00",
+      "year": 2008,
+      "posted_at": "2026-08-15"
+    },
+    {
+      "id": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1294244386A1KVVOAUTT",
+      "site": "paruvendu",
+      "site_label": "ParuVendu",
+      "titre": "Audi TT 2.0 TFSI 200 CV 2009 occasion Remiremont 88200",
+      "prix": "N/A",
+      "lien": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1294244386A1KVVOAUTT",
+      "image": "https://img.paruvendu.fr/media_ext/_https_/www.autoeasy.fr/bb/b4/L3dhdGVybWFyay12by8xNjQ3MzAxLmpwZz8yMDI2MDgxNTA4MzAzNw_rct?func=crop&w=480&gravity=auto",
+      "description": "",
+      "found_at": "2026-08-15T06:33:07.014956+00:00",
+      "year": 2009,
+      "posted_at": "2026-08-15"
+    },
     {
       "id": "https://www.autoscout24.fr/offres/audi-tt-3-2-v6-250-bvm6-pack-s-line-carbone-garantie-6-mois-quattro-ext-d-origine-gps-full-cuir-essence-bleu-cat_ma9mo15627-08fe1469-5abf-4f5e-b3c1-88e0ba293a11",
       "site": "autoscout24",
