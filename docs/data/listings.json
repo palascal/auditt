@@ -1,7 +1,59 @@
 {
-  "updated_at": "2026-08-18T06:40:42.543141+00:00",
-  "count": 76,
+  "updated_at": "2026-08-20T06:41:36.802709+00:00",
+  "count": 80,
   "items": [
+    {
+      "id": "https://www.autoscout24.fr/offres/audi-tt-coupe-1-8-tfsi-160-bvm6-garantie-1-an-essence-blanc-cat_ma9mo15627-5bff1bd4-ed72-4cd4-9933-f27e715c50b3",
+      "site": "autoscout24",
+      "site_label": "AutoScout24",
+      "titre": "Audi TT COUPE 1.8 TFSI 160 BVM6 GARANTIE 1 AN",
+      "prix": "N/A",
+      "lien": "https://www.autoscout24.fr/offres/audi-tt-coupe-1-8-tfsi-160-bvm6-garantie-1-an-essence-blanc-cat_ma9mo15627-5bff1bd4-ed72-4cd4-9933-f27e715c50b3",
+      "image": "",
+      "description": "",
+      "found_at": "2026-08-20T06:41:22.501144+00:00",
+      "year": null,
+      "posted_at": "2026-08-20"
+    },
+    {
+      "id": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1294381516A1KVVOAUTT",
+      "site": "paruvendu",
+      "site_label": "ParuVendu",
+      "titre": "Audi TT Roadster 2.0 TFSI 200ch S line S tronic 6 2007 occasion Chilly-Mazarin 91380",
+      "prix": "N/A",
+      "lien": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1294381516A1KVVOAUTT",
+      "image": "https://img.paruvendu.fr/media_ext/_https_/cdn2.intuityvo.fr/18/3f/L3VwbG9hZHMvaW50dWl0eS12by92ZWhpY2xlX3Bob3Rvcy92ZWhpY2xlX3Bob3Rvc183MmIxOWM5ZC03ZmEwLTQ1MDEtYTRlOS0zYzdmN2YxNGZlY2UuanBn_rct?func=crop&w=480&gravity=auto",
+      "description": "",
+      "found_at": "2026-08-20T06:41:13.073289+00:00",
+      "year": 2007,
+      "posted_at": "2026-08-20"
+    },
+    {
+      "id": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1294382820A1KVVOAUTT",
+      "site": "paruvendu",
+      "site_label": "ParuVendu",
+      "titre": "Audi TT 2007 occasion CUERS 83390",
+      "prix": "N/A",
+      "lien": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1294382820A1KVVOAUTT",
+      "image": "https://img.paruvendu.fr/media_ext/_https_/cdn2.intuityvo.fr/c8/49/L3VwbG9hZHMvaW50dWl0eS12by92ZWhpY2xlX3Bob3RvX2VkaXQvdmVoaWNsZV9waG90b19lZGl0X2U1N2U5ODdjLWYyNjMtNDE4OC1iNmRhLThiNjEzODcxMTY2OC5qcGc_rct?func=crop&w=480&gravity=auto",
+      "description": "",
+      "found_at": "2026-08-20T06:41:13.073195+00:00",
+      "year": 2007,
+      "posted_at": "2026-08-20"
+    },
+    {
+      "id": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1293835270A1KVVOAUTT",
+      "site": "paruvendu",
+      "site_label": "ParuVendu",
+      "titre": "Audi TT 3.2 V6 250 Quattro S line 2010 occasion Cavalaire Sur Mer 83240",
+      "prix": "N/A",
+      "lien": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1293835270A1KVVOAUTT",
+      "image": "https://img.paruvendu.fr/media_ext/_https_/photos.ubiflow.net/e5/b2/Lzc1NTMxOS81NDM2OTY2MDIvcGhvdG9zLzFfbW9kaWZpZWUuanBnP1BBUlVfVkVORFVfQVVUT19TVERfNDA5MDgxNjM1OCYyMDI2MDgyMDA3MzQ1OA_rct?func=crop&w=480&gravity=auto",
+      "description": "",
+      "found_at": "2026-08-20T06:41:13.072904+00:00",
+      "year": 2010,
+      "posted_at": "2026-08-20"
+    },
     {
       "id": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1294256819A1KVVOAUTT",
       "site": "paruvendu",
