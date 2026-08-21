@@ -1,7 +1,7 @@
 {
   "scrape_mode": "daily",
-  "total_inserted": 4,
-  "total_telegram": 4,
+  "total_inserted": 1,
+  "total_telegram": 1,
   "year_min": 2006,
   "year_max": 2010,
   "engines": [
@@ -13,10 +13,10 @@
     "ttrs"
   ],
   "purge": {
-    "before": 80,
-    "after": 80,
+    "before": 81,
+    "after": 79,
     "removed_sold": 0,
-    "removed_dead": 0,
+    "removed_dead": 2,
     "checked": 40
   },
   "sites": [
@@ -47,7 +47,7 @@
         "seen": 0,
         "ok": 0,
         "skip": 0,
-        "filter": 3
+        "filter": 5
       },
       "error": null
     },
@@ -61,7 +61,7 @@
         "seen": 0,
         "ok": 0,
         "skip": 0,
-        "filter": 15
+        "filter": 20
       },
       "error": null
     },
@@ -69,19 +69,19 @@
       "site": "paruvendu",
       "label": "ParuVendu",
       "jobs": 1,
-      "results": 3,
-      "inserted": 3,
+      "results": 0,
+      "inserted": 0,
       "stats": {
-        "seen": 1,
-        "filter": 21,
+        "seen": 6,
+        "filter": 19,
         "price": 0,
         "sold": 0,
         "skip": 0,
-        "ok": 3,
+        "ok": 0,
         "blocked": 0
       },
       "error": null
     }
   ],
-  "updated_at": "2026-08-20T06:41:59.971035+00:00"
+  "updated_at": "2026-08-21T06:42:33.443435+00:00"
 }

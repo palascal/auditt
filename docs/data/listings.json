@@ -1,19 +1,19 @@
 {
-  "updated_at": "2026-08-20T06:41:36.802709+00:00",
-  "count": 80,
+  "updated_at": "2026-08-21T06:42:33.441585+00:00",
+  "count": 79,
   "items": [
     {
-      "id": "https://www.autoscout24.fr/offres/audi-tt-coupe-1-8-tfsi-160-bvm6-garantie-1-an-essence-blanc-cat_ma9mo15627-5bff1bd4-ed72-4cd4-9933-f27e715c50b3",
+      "id": "https://www.autoscout24.fr/offres/audi-tt-coupe-3-2-250cv-quattro-dsg-phare-av-ar-mk3-catback-scrorpion-suivi-complet-garantie-essence-noir-cat_ma9mo15627-50c1ea7e-f6a9-4a5a-8b8f-1b7261da12e5",
       "site": "autoscout24",
       "site_label": "AutoScout24",
-      "titre": "Audi TT COUPE 1.8 TFSI 160 BVM6 GARANTIE 1 AN",
+      "titre": "Audi TT COUPE 3.2 250CV QUATTRO DSG/ PHARE AV AR MK3/ CATBACK SCRORPION/ SUIVI COMPLET / GARANTIE",
       "prix": "N/A",
-      "lien": "https://www.autoscout24.fr/offres/audi-tt-coupe-1-8-tfsi-160-bvm6-garantie-1-an-essence-blanc-cat_ma9mo15627-5bff1bd4-ed72-4cd4-9933-f27e715c50b3",
+      "lien": "https://www.autoscout24.fr/offres/audi-tt-coupe-3-2-250cv-quattro-dsg-phare-av-ar-mk3-catback-scrorpion-suivi-complet-garantie-essence-noir-cat_ma9mo15627-50c1ea7e-f6a9-4a5a-8b8f-1b7261da12e5",
       "image": "",
       "description": "",
-      "found_at": "2026-08-20T06:41:22.501144+00:00",
+      "found_at": "2026-08-21T06:41:01.622530+00:00",
       "year": null,
-      "posted_at": "2026-08-20"
+      "posted_at": "2026-08-21"
     },
     {
       "id": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1294381516A1KVVOAUTT",
@@ -77,19 +77,6 @@
       "image": "",
       "description": "",
       "found_at": "2026-08-15T06:33:16.538298+00:00",
-      "year": null,
-      "posted_at": "2026-08-15"
-    },
-    {
-      "id": "https://www.autoscout24.fr/offres/audi-tt-tt-roadster-1-8-tfsi-86895-km-essence-blanc-cat_ma9mo15627-335bf2fa-b7da-41c6-8b0e-926fd0b0c810",
-      "site": "autoscout24",
-      "site_label": "AutoScout24",
-      "titre": "Audi TT TT Roadster 1.8 TFSI  86895 km !!",
-      "prix": "N/A",
-      "lien": "https://www.autoscout24.fr/offres/audi-tt-tt-roadster-1-8-tfsi-86895-km-essence-blanc-cat_ma9mo15627-335bf2fa-b7da-41c6-8b0e-926fd0b0c810",
-      "image": "",
-      "description": "",
-      "found_at": "2026-08-15T06:33:16.538205+00:00",
       "year": null,
       "posted_at": "2026-08-15"
     },
