@@ -1,7 +1,20 @@
 {
-  "updated_at": "2026-08-21T06:42:33.441585+00:00",
-  "count": 79,
+  "updated_at": "2026-08-22T06:35:46.042504+00:00",
+  "count": 80,
   "items": [
+    {
+      "id": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1293082783A1KVVOAUTT",
+      "site": "paruvendu",
+      "site_label": "ParuVendu",
+      "titre": "Audi TT ROADSTER 2.0 TFSI 200 S-LINE S-TRONIC BVA 2008 occasion Béthune 62400",
+      "prix": "N/A",
+      "lien": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1293082783A1KVVOAUTT",
+      "image": "https://img.paruvendu.fr/media_ext/_https_/cdn2.intuityvo.fr/74/5c/L3VwbG9hZHMvaW50dWl0eS12by92ZWhpY2xlX3Bob3RvX2VkaXQvdmVoaWNsZV9waG90b19lZGl0Xzc5MjFlZWQ5LTE5ODAtNDg2Zi1hYWQ3LTUzNDVkZmI1OTNkNS5qcGc_rct?func=crop&w=480&gravity=auto",
+      "description": "",
+      "found_at": "2026-08-22T06:35:05.046433+00:00",
+      "year": 2008,
+      "posted_at": "2026-08-22"
+    },
     {
       "id": "https://www.autoscout24.fr/offres/audi-tt-coupe-3-2-250cv-quattro-dsg-phare-av-ar-mk3-catback-scrorpion-suivi-complet-garantie-essence-noir-cat_ma9mo15627-50c1ea7e-f6a9-4a5a-8b8f-1b7261da12e5",
       "site": "autoscout24",
