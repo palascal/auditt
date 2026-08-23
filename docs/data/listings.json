@@ -1,7 +1,46 @@
 {
-  "updated_at": "2026-08-22T06:35:46.042504+00:00",
-  "count": 80,
+  "updated_at": "2026-08-23T06:36:55.223084+00:00",
+  "count": 83,
   "items": [
+    {
+      "id": "https://www.autoscout24.fr/offres/audi-tt-tt-roadster-2-0-tfsi-200-essence-argent-cat_ma9mo15627-8a792fc0-3b83-49f1-ac79-f4889eb59c09",
+      "site": "autoscout24",
+      "site_label": "AutoScout24",
+      "titre": "Audi TT TT Roadster 2.0 TFSI 200",
+      "prix": "N/A",
+      "lien": "https://www.autoscout24.fr/offres/audi-tt-tt-roadster-2-0-tfsi-200-essence-argent-cat_ma9mo15627-8a792fc0-3b83-49f1-ac79-f4889eb59c09",
+      "image": "",
+      "description": "",
+      "found_at": "2026-08-23T06:36:38.000909+00:00",
+      "year": null,
+      "posted_at": "2026-08-23"
+    },
+    {
+      "id": "https://www.autoscout24.fr/offres/audi-tt-coupe-1-8-tfsi-160-bvm6-garantie-1-an-essence-blanc-cat_ma9mo15627-4518c237-5605-4cf8-8fc8-8a8c39411b7f",
+      "site": "autoscout24",
+      "site_label": "AutoScout24",
+      "titre": "Audi TT COUPE 1.8 TFSI 160 BVM6 GARANTIE 1 AN",
+      "prix": "N/A",
+      "lien": "https://www.autoscout24.fr/offres/audi-tt-coupe-1-8-tfsi-160-bvm6-garantie-1-an-essence-blanc-cat_ma9mo15627-4518c237-5605-4cf8-8fc8-8a8c39411b7f",
+      "image": "",
+      "description": "",
+      "found_at": "2026-08-23T06:36:38.000801+00:00",
+      "year": null,
+      "posted_at": "2026-08-23"
+    },
+    {
+      "id": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1292426236A1KVVOAUTT",
+      "site": "paruvendu",
+      "site_label": "ParuVendu",
+      "titre": "Audi TT Roadster 1.8 TFSI 160 2010 occasion La Ciotat 13600",
+      "prix": "N/A",
+      "lien": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1292426236A1KVVOAUTT",
+      "image": "https://img.paruvendu.fr/media_ext/_https_/media.paruvendu.fr/26/f1/L21lZGlhLXBhLzk5MjYvNi80Lzk5MjY2NDY1NTZfMS5qcGc_MjAyNjA4MjMwNTE1MDY_rct?func=crop&w=480&gravity=auto",
+      "description": "",
+      "found_at": "2026-08-23T06:36:28.990036+00:00",
+      "year": 2010,
+      "posted_at": "2026-08-23"
+    },
     {
       "id": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1293082783A1KVVOAUTT",
       "site": "paruvendu",
