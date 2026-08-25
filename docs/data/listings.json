@@ -1,7 +1,20 @@
 {
-  "updated_at": "2026-08-24T06:54:09.043651+00:00",
-  "count": 83,
+  "updated_at": "2026-08-25T06:41:50.764322+00:00",
+  "count": 84,
   "items": [
+    {
+      "id": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1294538879A1KVVOAUTT",
+      "site": "paruvendu",
+      "site_label": "ParuVendu",
+      "titre": "Audi TT Coupé V6 3.2 250 Quattro S line S-Tronic A 2008 occasion Paris 75015",
+      "prix": "N/A",
+      "lien": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1294538879A1KVVOAUTT",
+      "image": "https://img.paruvendu.fr/media_ext/_https_/media.paruvendu.fr/93/b5/L21lZGlhLXBhL1dWMTcvNy83L1dWMTc3NzY3OTQ3XzEuanBlZz8yMDI2MDgyNDIyNDIwOA_rct?func=crop&w=480&gravity=auto",
+      "description": "",
+      "found_at": "2026-08-25T06:41:14.936909+00:00",
+      "year": 2008,
+      "posted_at": "2026-08-25"
+    },
     {
       "id": "https://www.autoscout24.fr/offres/audi-tt-tt-roadster-2-0-tfsi-200-essence-argent-cat_ma9mo15627-8a792fc0-3b83-49f1-ac79-f4889eb59c09",
       "site": "autoscout24",
