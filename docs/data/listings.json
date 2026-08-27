@@ -1,7 +1,46 @@
 {
-  "updated_at": "2026-08-26T06:43:43.012132+00:00",
-  "count": 84,
+  "updated_at": "2026-08-27T17:19:27.909986+00:00",
+  "count": 86,
   "items": [
+    {
+      "id": "https://www.autoscout24.fr/offres/audi-tt-tt-coupe-1-8-tfsi-160-s-line-essence-cat_ma9mo15627-06bbf5b3-6ac4-4b7e-b327-be31143fdced",
+      "site": "autoscout24",
+      "site_label": "AutoScout24",
+      "titre": "Audi TT TT Coupé 1.8 TFSI 160 S line",
+      "prix": "N/A",
+      "lien": "https://www.autoscout24.fr/offres/audi-tt-tt-coupe-1-8-tfsi-160-s-line-essence-cat_ma9mo15627-06bbf5b3-6ac4-4b7e-b327-be31143fdced",
+      "image": "",
+      "description": "",
+      "found_at": "2026-08-27T17:18:42.387552+00:00",
+      "year": null,
+      "posted_at": "2026-08-27"
+    },
+    {
+      "id": "https://www.autoscout24.fr/offres/audi-tt-coupe-2-0-tfsi-200ch-s-tronic-a-carplay-demi-ligne-suivi-essence-blanc-cat_ma9mo15627-9d0cc3d1-d0d0-440c-b9e5-75771d410078",
+      "site": "autoscout24",
+      "site_label": "AutoScout24",
+      "titre": "Audi TT coupe 2.0 tfsi 200ch s-tronic a - carplay demi-ligne suivi",
+      "prix": "N/A",
+      "lien": "https://www.autoscout24.fr/offres/audi-tt-coupe-2-0-tfsi-200ch-s-tronic-a-carplay-demi-ligne-suivi-essence-blanc-cat_ma9mo15627-9d0cc3d1-d0d0-440c-b9e5-75771d410078",
+      "image": "",
+      "description": "",
+      "found_at": "2026-08-27T17:18:42.387419+00:00",
+      "year": null,
+      "posted_at": "2026-08-27"
+    },
+    {
+      "id": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1293717214A1KVVOAUTT",
+      "site": "paruvendu",
+      "site_label": "ParuVendu",
+      "titre": "Audi TT 2.0 TFSI ROADSTER S TRONIC S LINE 2010 occasion Montpellier 34070",
+      "prix": "N/A",
+      "lien": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1293717214A1KVVOAUTT",
+      "image": "https://img.paruvendu.fr/media_ext/_https_/api.sayspilot360.fr/a0/c6/L3N0b3JhZ2UvYWdlbmNpZXMvMzcvdmVoaWNsZXMvMTUyNDIvcGhvdG9zL29yaWdpbmFsL2ltZy0zMjYxLmpwZWc_MjAyNjA4MjcxNTM1MDU_rct?func=crop&w=480&gravity=auto",
+      "description": "",
+      "found_at": "2026-08-27T17:18:33.629160+00:00",
+      "year": 2010,
+      "posted_at": "2026-08-27"
+    },
     {
       "id": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1294538879A1KVVOAUTT",
       "site": "paruvendu",
@@ -25,19 +64,6 @@
       "image": "",
       "description": "",
       "found_at": "2026-08-23T06:36:38.000909+00:00",
-      "year": null,
-      "posted_at": "2026-08-23"
-    },
-    {
-      "id": "https://www.autoscout24.fr/offres/audi-tt-coupe-1-8-tfsi-160-bvm6-garantie-1-an-essence-blanc-cat_ma9mo15627-4518c237-5605-4cf8-8fc8-8a8c39411b7f",
-      "site": "autoscout24",
-      "site_label": "AutoScout24",
-      "titre": "Audi TT COUPE 1.8 TFSI 160 BVM6 GARANTIE 1 AN",
-      "prix": "N/A",
-      "lien": "https://www.autoscout24.fr/offres/audi-tt-coupe-1-8-tfsi-160-bvm6-garantie-1-an-essence-blanc-cat_ma9mo15627-4518c237-5605-4cf8-8fc8-8a8c39411b7f",
-      "image": "",
-      "description": "",
-      "found_at": "2026-08-23T06:36:38.000801+00:00",
       "year": null,
       "posted_at": "2026-08-23"
     },
