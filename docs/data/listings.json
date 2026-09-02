@@ -1,7 +1,46 @@
 {
-  "updated_at": "2026-09-01T11:04:33.309704+00:00",
-  "count": 87,
+  "updated_at": "2026-09-02T10:38:22.427526+00:00",
+  "count": 90,
   "items": [
+    {
+      "id": "https://www.autoscout24.fr/offres/audi-tt-coupe-1-8-tfsi-160-bvm6-garantie-1-an-essence-blanc-cat_ma9mo15627-48f481a5-6868-4b3e-aff2-c94695f94807",
+      "site": "autoscout24",
+      "site_label": "AutoScout24",
+      "titre": "Audi TT COUPE 1.8 TFSI 160 BVM6 GARANTIE 1 AN",
+      "prix": "N/A",
+      "lien": "https://www.autoscout24.fr/offres/audi-tt-coupe-1-8-tfsi-160-bvm6-garantie-1-an-essence-blanc-cat_ma9mo15627-48f481a5-6868-4b3e-aff2-c94695f94807",
+      "image": "",
+      "description": "",
+      "found_at": "2026-09-02T10:38:22.364822+00:00",
+      "year": null,
+      "posted_at": "2026-09-02"
+    },
+    {
+      "id": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1292833449A1KVVOAUTT",
+      "site": "paruvendu",
+      "site_label": "ParuVendu",
+      "titre": "Audi TT 2.0 TFSI 272CH QUARO BV S-TRONIC SIEGES ELEC/CHAUFFANTS CA 2009 occasion Montussan 33450",
+      "prix": "N/A",
+      "lien": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1292833449A1KVVOAUTT",
+      "image": "https://img.paruvendu.fr/media_ext/_https_/spidervo.s3.fr-par.scw.cloud/14/71/L3Bob3Rvcy8wZjI3NTU3MTA5N2RiZTgyMWU3MmRlYmYyMmMyN2Y3OS9zdG9ja185MjIvaW1hZ2VfMzU3NTI3M18zLmpwZz8yMDI2MDkwMjA1MTUwNg_rct?func=crop&w=480&gravity=auto",
+      "description": "",
+      "found_at": "2026-09-02T10:38:13.821433+00:00",
+      "year": 2009,
+      "posted_at": "2026-09-02"
+    },
+    {
+      "id": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1294879858A1KVVOAUTT",
+      "site": "paruvendu",
+      "site_label": "ParuVendu",
+      "titre": "Audi TT Audi Coupé 2.0 TFSI 12.0cv 2007 occasion Châtenoy-en-Bresse 71380",
+      "prix": "N/A",
+      "lien": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1294879858A1KVVOAUTT",
+      "image": "https://img.paruvendu.fr/_static_/2026090208/communfo/img/sitemobile/novisu-320x200.jpg",
+      "description": "",
+      "found_at": "2026-09-02T10:38:13.821147+00:00",
+      "year": 2007,
+      "posted_at": "2026-09-02"
+    },
     {
       "id": "https://www.autoscout24.fr/offres/audi-tt-s-coupe-quattro-2-0-tfsi-bv-s-tronic-s-coupe-phase-1-essence-noir-cat_ma9mo15627-d8e4eb80-54d0-4341-ab9a-35b898f788e5",
       "site": "autoscout24",
