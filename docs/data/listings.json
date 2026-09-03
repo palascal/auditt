@@ -1,7 +1,20 @@
 {
-  "updated_at": "2026-09-02T10:38:22.427526+00:00",
-  "count": 90,
+  "updated_at": "2026-09-03T10:39:28.262358+00:00",
+  "count": 91,
   "items": [
+    {
+      "id": "https://www.autoscout24.fr/offres/audi-tt-s-coupe-quattro-2-0-tfsi-bv-s-tronic-covering-noir-satin-essence-noir-cat_ma9mo15627-d8e4eb80-54d0-4341-ab9a-35b898f788e5",
+      "site": "autoscout24",
+      "site_label": "AutoScout24",
+      "titre": "Audi TT S Coupé Quattro 2.0 TFSI - BV S-tronic . covering noir satin",
+      "prix": "N/A",
+      "lien": "https://www.autoscout24.fr/offres/audi-tt-s-coupe-quattro-2-0-tfsi-bv-s-tronic-covering-noir-satin-essence-noir-cat_ma9mo15627-d8e4eb80-54d0-4341-ab9a-35b898f788e5",
+      "image": "",
+      "description": "",
+      "found_at": "2026-09-03T10:39:27.618669+00:00",
+      "year": null,
+      "posted_at": "2026-09-03"
+    },
     {
       "id": "https://www.autoscout24.fr/offres/audi-tt-coupe-1-8-tfsi-160-bvm6-garantie-1-an-essence-blanc-cat_ma9mo15627-48f481a5-6868-4b3e-aff2-c94695f94807",
       "site": "autoscout24",
