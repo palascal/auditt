@@ -1,7 +1,20 @@
 {
-  "updated_at": "2026-09-03T10:39:28.262358+00:00",
-  "count": 91,
+  "updated_at": "2026-09-04T10:34:41.007333+00:00",
+  "count": 92,
   "items": [
+    {
+      "id": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1289695957A1KVVOAUTT",
+      "site": "paruvendu",
+      "site_label": "ParuVendu",
+      "titre": "Audi TT 3.2 V6 Quattro DSG 2006 occasion Le Pont-de-Beauvoisin 38480",
+      "prix": "N/A",
+      "lien": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1289695957A1KVVOAUTT",
+      "image": "https://img.paruvendu.fr/media_ext/_https_/media.paruvendu.fr/6e/ee/L21lZGlhLXBhL1dWMTcvNy8xL1dWMTc3MTA5OTI0XzEucG5nPzIwMjYwOTAzMTcxMjEw_rct?func=crop&w=480&gravity=auto",
+      "description": "",
+      "found_at": "2026-09-04T10:34:25.850734+00:00",
+      "year": 2006,
+      "posted_at": "2026-09-04"
+    },
     {
       "id": "https://www.autoscout24.fr/offres/audi-tt-s-coupe-quattro-2-0-tfsi-bv-s-tronic-covering-noir-satin-essence-noir-cat_ma9mo15627-d8e4eb80-54d0-4341-ab9a-35b898f788e5",
       "site": "autoscout24",

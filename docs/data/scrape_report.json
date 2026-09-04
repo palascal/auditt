@@ -13,8 +13,8 @@
     "ttrs"
   ],
   "purge": {
-    "before": 91,
-    "after": 91,
+    "before": 92,
+    "after": 92,
     "removed_sold": 0,
     "removed_dead": 0,
     "checked": 40
@@ -24,15 +24,15 @@
       "site": "autoscout24",
       "label": "AutoScout24",
       "jobs": 1,
-      "results": 1,
-      "inserted": 1,
+      "results": 0,
+      "inserted": 0,
       "stats": {
-        "seen": 9,
+        "seen": 8,
         "filter": 0,
         "price": 0,
         "sold": 0,
         "skip": 0,
-        "ok": 1,
+        "ok": 0,
         "blocked": 0
       },
       "error": null
@@ -61,7 +61,7 @@
         "seen": 0,
         "ok": 0,
         "skip": 0,
-        "filter": 5
+        "filter": 10
       },
       "error": null
     },
@@ -69,19 +69,19 @@
       "site": "paruvendu",
       "label": "ParuVendu",
       "jobs": 1,
-      "results": 0,
-      "inserted": 0,
+      "results": 1,
+      "inserted": 1,
       "stats": {
-        "seen": 5,
+        "seen": 4,
         "filter": 20,
         "price": 0,
         "sold": 0,
         "skip": 0,
-        "ok": 0,
+        "ok": 1,
         "blocked": 0
       },
       "error": null
     }
   ],
-  "updated_at": "2026-09-03T10:40:02.171635+00:00"
+  "updated_at": "2026-09-04T10:35:25.760608+00:00"
 }
