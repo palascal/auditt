@@ -1,7 +1,46 @@
 {
-  "updated_at": "2026-09-04T10:34:41.007333+00:00",
-  "count": 92,
+  "updated_at": "2026-09-05T09:56:54.184077+00:00",
+  "count": 95,
   "items": [
+    {
+      "id": "https://www.autoscout24.fr/offres/audi-tt-coupe-2-0-tfsi-200-faible-kilometrage-essence-noir-cat_ma9mo15627-2fd4c284-d0e7-444c-ad36-4718599d0a6d",
+      "site": "autoscout24",
+      "site_label": "AutoScout24",
+      "titre": "Audi TT Coupe 2.0 TFSI 200 Faible Kilometrage",
+      "prix": "N/A",
+      "lien": "https://www.autoscout24.fr/offres/audi-tt-coupe-2-0-tfsi-200-faible-kilometrage-essence-noir-cat_ma9mo15627-2fd4c284-d0e7-444c-ad36-4718599d0a6d",
+      "image": "",
+      "description": "",
+      "found_at": "2026-09-05T09:56:54.119632+00:00",
+      "year": null,
+      "posted_at": "2026-09-05"
+    },
+    {
+      "id": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1295026444A1KVVOAUTT",
+      "site": "paruvendu",
+      "site_label": "ParuVendu",
+      "titre": "Audi TT 1.8T 0 occasion Longevelle 70110",
+      "prix": "N/A",
+      "lien": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1295026444A1KVVOAUTT",
+      "image": "https://img.paruvendu.fr/media_ext/_https_/media.paruvendu.fr/29/a3/L21lZGlhLXBhL1dWMTcvNy84L1dWMTc3ODk3NDUzXzEuanBlZz8yMDI2MDkwNTA4MDIwNA_rct?func=crop&w=480&gravity=auto",
+      "description": "",
+      "found_at": "2026-09-05T09:56:45.528209+00:00",
+      "year": null,
+      "posted_at": "2026-09-05"
+    },
+    {
+      "id": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1295030740A1KVVOAUTT",
+      "site": "paruvendu",
+      "site_label": "ParuVendu",
+      "titre": "Audi TT COUPE 3.2 V6 250 QUARO - PACK BOSE - RHD - ENTRETIEN OK 2006 occasion Saint-Maximin 60740",
+      "prix": "N/A",
+      "lien": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1295030740A1KVVOAUTT",
+      "image": "https://img.paruvendu.fr/media_ext/_https_/d2runzreg8rdhh.cloudfront.net/a0/04/L3ZlaGljbGUtcGhvdG9zLzExMzExMTIxL3Bob3RvLTE3ODg1MzYzNjEuanBnPzIwMjYwOTA1MTEzMTUw_rct?func=crop&w=480&gravity=auto",
+      "description": "",
+      "found_at": "2026-09-05T09:56:45.528059+00:00",
+      "year": 2006,
+      "posted_at": "2026-09-05"
+    },
     {
       "id": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1289695957A1KVVOAUTT",
       "site": "paruvendu",

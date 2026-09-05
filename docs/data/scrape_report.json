@@ -1,7 +1,7 @@
 {
   "scrape_mode": "daily",
-  "total_inserted": 1,
-  "total_telegram": 1,
+  "total_inserted": 3,
+  "total_telegram": 3,
   "year_min": 2006,
   "year_max": 2010,
   "engines": [
@@ -13,8 +13,8 @@
     "ttrs"
   ],
   "purge": {
-    "before": 92,
-    "after": 92,
+    "before": 95,
+    "after": 95,
     "removed_sold": 0,
     "removed_dead": 0,
     "checked": 40
@@ -24,15 +24,15 @@
       "site": "autoscout24",
       "label": "AutoScout24",
       "jobs": 1,
-      "results": 0,
-      "inserted": 0,
+      "results": 1,
+      "inserted": 1,
       "stats": {
         "seen": 8,
         "filter": 0,
         "price": 0,
         "sold": 0,
         "skip": 0,
-        "ok": 0,
+        "ok": 1,
         "blocked": 0
       },
       "error": null
@@ -43,13 +43,8 @@
       "jobs": 1,
       "results": 0,
       "inserted": 0,
-      "stats": {
-        "seen": 0,
-        "ok": 0,
-        "skip": 0,
-        "filter": 0
-      },
-      "error": null
+      "stats": {},
+      "error": "'Header' object has no attribute 'lower'"
     },
     {
       "site": "leboncoin",
@@ -57,31 +52,26 @@
       "jobs": 1,
       "results": 0,
       "inserted": 0,
-      "stats": {
-        "seen": 0,
-        "ok": 0,
-        "skip": 0,
-        "filter": 10
-      },
-      "error": null
+      "stats": {},
+      "error": "'Header' object has no attribute 'lower'"
     },
     {
       "site": "paruvendu",
       "label": "ParuVendu",
       "jobs": 1,
-      "results": 1,
-      "inserted": 1,
+      "results": 2,
+      "inserted": 2,
       "stats": {
-        "seen": 4,
-        "filter": 20,
+        "seen": 8,
+        "filter": 15,
         "price": 0,
         "sold": 0,
         "skip": 0,
-        "ok": 1,
+        "ok": 2,
         "blocked": 0
       },
       "error": null
     }
   ],
-  "updated_at": "2026-09-04T10:35:25.760608+00:00"
+  "updated_at": "2026-09-05T09:57:30.407323+00:00"
 }
