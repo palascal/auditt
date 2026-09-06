@@ -1,7 +1,7 @@
 {
   "scrape_mode": "daily",
-  "total_inserted": 3,
-  "total_telegram": 3,
+  "total_inserted": 1,
+  "total_telegram": 1,
   "year_min": 2006,
   "year_max": 2010,
   "engines": [
@@ -13,8 +13,8 @@
     "ttrs"
   ],
   "purge": {
-    "before": 95,
-    "after": 95,
+    "before": 96,
+    "after": 96,
     "removed_sold": 0,
     "removed_dead": 0,
     "checked": 40
@@ -43,8 +43,13 @@
       "jobs": 1,
       "results": 0,
       "inserted": 0,
-      "stats": {},
-      "error": "'Header' object has no attribute 'lower'"
+      "stats": {
+        "seen": 0,
+        "ok": 0,
+        "skip": 0,
+        "filter": 0
+      },
+      "error": null
     },
     {
       "site": "leboncoin",
@@ -52,26 +57,31 @@
       "jobs": 1,
       "results": 0,
       "inserted": 0,
-      "stats": {},
-      "error": "'Header' object has no attribute 'lower'"
+      "stats": {
+        "seen": 0,
+        "ok": 0,
+        "skip": 0,
+        "filter": 10
+      },
+      "error": null
     },
     {
       "site": "paruvendu",
       "label": "ParuVendu",
       "jobs": 1,
-      "results": 2,
-      "inserted": 2,
+      "results": 0,
+      "inserted": 0,
       "stats": {
-        "seen": 8,
-        "filter": 15,
+        "seen": 7,
+        "filter": 18,
         "price": 0,
         "sold": 0,
         "skip": 0,
-        "ok": 2,
+        "ok": 0,
         "blocked": 0
       },
       "error": null
     }
   ],
-  "updated_at": "2026-09-05T09:57:30.407323+00:00"
+  "updated_at": "2026-09-06T10:15:18.302942+00:00"
 }

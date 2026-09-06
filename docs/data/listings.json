@@ -1,7 +1,20 @@
 {
-  "updated_at": "2026-09-05T09:56:54.184077+00:00",
-  "count": 95,
+  "updated_at": "2026-09-06T10:14:46.236896+00:00",
+  "count": 96,
   "items": [
+    {
+      "id": "https://www.autoscout24.fr/offres/audi-tt-cabriolet-2-0l-tfsi-200ch-s-line-essence-gris-cat_ma9mo15627-c6a0d026-20de-4033-834d-4a1ea779c18e",
+      "site": "autoscout24",
+      "site_label": "AutoScout24",
+      "titre": "Audi TT cabriolet 2.0l Tfsi 200ch S-Line",
+      "prix": "N/A",
+      "lien": "https://www.autoscout24.fr/offres/audi-tt-cabriolet-2-0l-tfsi-200ch-s-line-essence-gris-cat_ma9mo15627-c6a0d026-20de-4033-834d-4a1ea779c18e",
+      "image": "",
+      "description": "",
+      "found_at": "2026-09-06T10:14:43.443463+00:00",
+      "year": null,
+      "posted_at": "2026-09-06"
+    },
     {
       "id": "https://www.autoscout24.fr/offres/audi-tt-coupe-2-0-tfsi-200-faible-kilometrage-essence-noir-cat_ma9mo15627-2fd4c284-d0e7-444c-ad36-4718599d0a6d",
       "site": "autoscout24",
