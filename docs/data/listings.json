@@ -1,7 +1,59 @@
 {
-  "updated_at": "2026-09-06T10:14:46.236896+00:00",
-  "count": 96,
+  "updated_at": "2026-09-07T11:32:59.648269+00:00",
+  "count": 100,
   "items": [
+    {
+      "id": "https://www.autoscout24.fr/offres/audi-tt-tt-coupe-2-0-tdi-170-dpf-quattro-s-line-diesel-blanc-cat_ma9mo15627-8409a1db-2c9f-4b49-8836-a7f714267409",
+      "site": "autoscout24",
+      "site_label": "AutoScout24",
+      "titre": "Audi TT TT Coupé 2.0 TDI 170 DPF Quattro S line",
+      "prix": "N/A",
+      "lien": "https://www.autoscout24.fr/offres/audi-tt-tt-coupe-2-0-tdi-170-dpf-quattro-s-line-diesel-blanc-cat_ma9mo15627-8409a1db-2c9f-4b49-8836-a7f714267409",
+      "image": "",
+      "description": "",
+      "found_at": "2026-09-07T11:32:59.500558+00:00",
+      "year": null,
+      "posted_at": "2026-09-07"
+    },
+    {
+      "id": "https://www.autoscout24.fr/offres/audi-tt-3-2-v6-250ch-quattro-essence-gris-cat_ma9mo15627-6c389256-e1fb-4ed6-b6e5-41e6458f0b45",
+      "site": "autoscout24",
+      "site_label": "AutoScout24",
+      "titre": "Audi TT 3.2 V6 250ch quattro",
+      "prix": "N/A",
+      "lien": "https://www.autoscout24.fr/offres/audi-tt-3-2-v6-250ch-quattro-essence-gris-cat_ma9mo15627-6c389256-e1fb-4ed6-b6e5-41e6458f0b45",
+      "image": "",
+      "description": "",
+      "found_at": "2026-09-07T11:32:59.500465+00:00",
+      "year": null,
+      "posted_at": "2026-09-07"
+    },
+    {
+      "id": "https://www.autoscout24.fr/offres/audi-tt-coupe-2-0-tfsi-200-essence-cat_ma9mo15627-bb03eab5-9716-46aa-9f4a-d51f9f8af442",
+      "site": "autoscout24",
+      "site_label": "AutoScout24",
+      "titre": "Audi TT Coupé 2.0 TFSI 200",
+      "prix": "N/A",
+      "lien": "https://www.autoscout24.fr/offres/audi-tt-coupe-2-0-tfsi-200-essence-cat_ma9mo15627-bb03eab5-9716-46aa-9f4a-d51f9f8af442",
+      "image": "",
+      "description": "",
+      "found_at": "2026-09-07T11:32:59.500324+00:00",
+      "year": null,
+      "posted_at": "2026-09-07"
+    },
+    {
+      "id": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1295081074A1KVVOAUTT",
+      "site": "paruvendu",
+      "site_label": "ParuVendu",
+      "titre": "Audi TT Coupé 2.0 TFSI 200 2007 occasion Haverskerque 59660",
+      "prix": "N/A",
+      "lien": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1295081074A1KVVOAUTT",
+      "image": "https://img.paruvendu.fr/media_ext/_https_/media.paruvendu.fr/f3/3f/L21lZGlhLXBhL1dWMTcvNy85L1dWMTc3OTA2MDM5XzEuanBlZz8yMDI2MDkwNjIzMTIxMQ_rct?func=crop&w=480&gravity=auto",
+      "description": "",
+      "found_at": "2026-09-07T11:32:51.209326+00:00",
+      "year": 2007,
+      "posted_at": "2026-09-07"
+    },
     {
       "id": "https://www.autoscout24.fr/offres/audi-tt-cabriolet-2-0l-tfsi-200ch-s-line-essence-gris-cat_ma9mo15627-c6a0d026-20de-4033-834d-4a1ea779c18e",
       "site": "autoscout24",
