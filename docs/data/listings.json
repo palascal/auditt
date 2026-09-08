@@ -1,7 +1,46 @@
 {
-  "updated_at": "2026-09-07T11:32:59.648269+00:00",
-  "count": 100,
+  "updated_at": "2026-09-08T10:34:09.764383+00:00",
+  "count": 103,
   "items": [
+    {
+      "id": "https://www.autoscout24.fr/offres/audi-tt-2-0-tfsi-211ch-r-gulateur-radar-de-recul-si-ges-chauffants-essence-bleu-cat_ma9mo15627-427e85b7-def9-442f-98eb-27ba0b36c3d5",
+      "site": "autoscout24",
+      "site_label": "AutoScout24",
+      "titre": "Audi TT 2.0 TFSI 211CH R?gulateur - Radar de recul - Si?ges chauffants",
+      "prix": "N/A",
+      "lien": "https://www.autoscout24.fr/offres/audi-tt-2-0-tfsi-211ch-r-gulateur-radar-de-recul-si-ges-chauffants-essence-bleu-cat_ma9mo15627-427e85b7-def9-442f-98eb-27ba0b36c3d5",
+      "image": "",
+      "description": "",
+      "found_at": "2026-09-08T10:33:28.770984+00:00",
+      "year": null,
+      "posted_at": "2026-09-08"
+    },
+    {
+      "id": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1295115986A1KVVOAUTT",
+      "site": "paruvendu",
+      "site_label": "ParuVendu",
+      "titre": "Audi TT Coupé 2.0 TFSI 200 2007 occasion Auxerre 89000",
+      "prix": "N/A",
+      "lien": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1295115986A1KVVOAUTT",
+      "image": "https://img.paruvendu.fr/media_ext/_https_/media.paruvendu.fr/8e/2d/L21lZGlhLXBhL1dWMTcvNy85L1dWMTc3OTEwNDY1XzEucG5nPzIwMjYwOTA4MDEwMjA3_rct?func=crop&w=480&gravity=auto",
+      "description": "",
+      "found_at": "2026-09-08T10:33:19.699296+00:00",
+      "year": 2007,
+      "posted_at": "2026-09-08"
+    },
+    {
+      "id": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1295134833A1KVVOAUTT",
+      "site": "paruvendu",
+      "site_label": "ParuVendu",
+      "titre": "Audi TT 2.0 TFSI 2008 occasion Béthune 62400",
+      "prix": "N/A",
+      "lien": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1295134833A1KVVOAUTT",
+      "image": "https://img.paruvendu.fr/media_ext/_https_/www.fiveauction.fr/5f/30/L3N0b3JhZ2UvZGF0YS9iZXRodW5lL2RvYy8xNzg3NTgyOTc1LmpwZz8yMDI2MDkwODExMjEyNA_rct?func=crop&w=480&gravity=auto",
+      "description": "",
+      "found_at": "2026-09-08T10:33:19.699056+00:00",
+      "year": 2008,
+      "posted_at": "2026-09-08"
+    },
     {
       "id": "https://www.autoscout24.fr/offres/audi-tt-tt-coupe-2-0-tdi-170-dpf-quattro-s-line-diesel-blanc-cat_ma9mo15627-8409a1db-2c9f-4b49-8836-a7f714267409",
       "site": "autoscout24",
