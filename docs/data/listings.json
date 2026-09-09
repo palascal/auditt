@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-08T10:34:09.764383+00:00",
-  "count": 103,
+  "updated_at": "2026-09-09T10:45:23.721192+00:00",
+  "count": 101,
   "items": [
     {
       "id": "https://www.autoscout24.fr/offres/audi-tt-2-0-tfsi-211ch-r-gulateur-radar-de-recul-si-ges-chauffants-essence-bleu-cat_ma9mo15627-427e85b7-def9-442f-98eb-27ba0b36c3d5",
@@ -458,19 +458,6 @@
       "posted_at": "2026-08-14"
     },
     {
-      "id": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1291864023A1KVVOAUTT",
-      "site": "paruvendu",
-      "site_label": "ParuVendu",
-      "titre": "Audi TT 2.0 TFSI 200CH S TRONIC 6 2007 occasion Cannes 06400",
-      "prix": "N/A",
-      "lien": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1291864023A1KVVOAUTT",
-      "image": "https://img.paruvendu.fr/media_ext/_https_/photos.publicationvo.com/60/7d/L2NhcmRpZmYvVk8vQVVOQS9BVU5BLTU0NzItMTQ3MTE2LmpwZz9tZDU9ODdiYTJkYjU3OWRiMTAxN2Y5N2RhMzkxOTEyYjI5YWYmMjAyNjA4MTAwNTE1MDc_rct?func=crop&w=480&gravity=auto",
-      "description": "",
-      "found_at": "2026-08-14T07:20:34.138890+00:00",
-      "year": 2007,
-      "posted_at": "2026-08-14"
-    },
-    {
       "id": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1294191575A1KVVOAUTT",
       "site": "paruvendu",
       "site_label": "ParuVendu",
@@ -481,19 +468,6 @@
       "description": "",
       "found_at": "2026-08-14T07:20:34.138760+00:00",
       "year": null,
-      "posted_at": "2026-08-14"
-    },
-    {
-      "id": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1293492025A1KVVOAUTT",
-      "site": "paruvendu",
-      "site_label": "ParuVendu",
-      "titre": "Audi TT Coupé S-Line 2.0 TFSI - 200 - SIEGES CHAUFFANTS 2007 occasion Pontarlier 25300",
-      "prix": "N/A",
-      "lien": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1293492025A1KVVOAUTT",
-      "image": "https://img.paruvendu.fr/media_ext/_https_/spidervo.s3.fr-par.scw.cloud/85/9a/L3Bob3Rvcy81NTU3MDBiNGU4ZTVlNDExZThkZDNmMGE3MWQ4NjgzZS9zdG9ja18xMDUyL2ltYWdlXzM2MDA2OTlfMS5qcGc_MjAyNjA4MDExNzI3Mjg_rct?func=crop&w=480&gravity=auto",
-      "description": "",
-      "found_at": "2026-08-14T07:20:34.138532+00:00",
-      "year": 2007,
       "posted_at": "2026-08-14"
     },
     {
