@@ -1,7 +1,20 @@
 {
-  "updated_at": "2026-09-09T10:45:23.721192+00:00",
-  "count": 101,
+  "updated_at": "2026-09-10T10:34:57.591325+00:00",
+  "count": 102,
   "items": [
+    {
+      "id": "https://www.autoscout24.fr/offres/audi-tt-3-2-v6-250-quattro-s-line-essence-blanc-cat_ma9mo15627-f6692596-fe5f-4c90-9d5c-f8004cf3aaf9",
+      "site": "autoscout24",
+      "site_label": "AutoScout24",
+      "titre": "Audi TT 3.2 V6 250 Quattro S line",
+      "prix": "N/A",
+      "lien": "https://www.autoscout24.fr/offres/audi-tt-3-2-v6-250-quattro-s-line-essence-blanc-cat_ma9mo15627-f6692596-fe5f-4c90-9d5c-f8004cf3aaf9",
+      "image": "",
+      "description": "",
+      "found_at": "2026-09-10T10:34:57.541080+00:00",
+      "year": null,
+      "posted_at": "2026-09-10"
+    },
     {
       "id": "https://www.autoscout24.fr/offres/audi-tt-2-0-tfsi-211ch-r-gulateur-radar-de-recul-si-ges-chauffants-essence-bleu-cat_ma9mo15627-427e85b7-def9-442f-98eb-27ba0b36c3d5",
       "site": "autoscout24",
