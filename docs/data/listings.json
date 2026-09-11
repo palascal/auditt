@@ -1,7 +1,46 @@
 {
-  "updated_at": "2026-09-10T10:34:57.591325+00:00",
-  "count": 102,
+  "updated_at": "2026-09-11T10:35:43.176652+00:00",
+  "count": 105,
   "items": [
+    {
+      "id": "https://www.autoscout24.fr/offres/audi-tt-roadster-2-0-tfsi-200-s-tronic-bva-garantie-6-mois-essence-noir-cat_ma9mo15627-f31d36ad-7a47-47c8-a563-e621655dcaf5",
+      "site": "autoscout24",
+      "site_label": "AutoScout24",
+      "titre": "Audi TT roadster 2.0 tfsi 200 s-tronic bva-garantie 6 mois",
+      "prix": "N/A",
+      "lien": "https://www.autoscout24.fr/offres/audi-tt-roadster-2-0-tfsi-200-s-tronic-bva-garantie-6-mois-essence-noir-cat_ma9mo15627-f31d36ad-7a47-47c8-a563-e621655dcaf5",
+      "image": "",
+      "description": "",
+      "found_at": "2026-09-11T10:35:40.303265+00:00",
+      "year": null,
+      "posted_at": "2026-09-11"
+    },
+    {
+      "id": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1295226694A1KVVOAUTT",
+      "site": "paruvendu",
+      "site_label": "ParuVendu",
+      "titre": "Audi TT ROADSTER 2.0 TFSI 200 S-TRONIC BVA 2009 occasion Valence 26000",
+      "prix": "N/A",
+      "lien": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1295226694A1KVVOAUTT",
+      "image": "https://img.paruvendu.fr/media_ext/_https_/d2runzreg8rdhh.cloudfront.net/ea/75/L3ZlaGljbGUtcGhvdG9zLzExMzU5Njg0L0lNR18zMjMwLmpwZWc_MjAyNjA5MTAyMDE4NTM_rct?func=crop&w=480&gravity=auto",
+      "description": "",
+      "found_at": "2026-09-11T10:35:31.365133+00:00",
+      "year": 2009,
+      "posted_at": "2026-09-11"
+    },
+    {
+      "id": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1291748131A1KVVOAUTT",
+      "site": "paruvendu",
+      "site_label": "ParuVendu",
+      "titre": "Audi TT 1.8 TFSI 160ch S line VENTE A PRO 2010 occasion Rozay-en-Brie 77540",
+      "prix": "N/A",
+      "lien": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1291748131A1KVVOAUTT",
+      "image": "https://img.paruvendu.fr/media_ext/_https_/media.dev.bnjdev.com/13/a3/L2dlbmVyYXRlLnBocD9pPWh0dHBzOi8vbWVkaWEuZGV2LmJuamRldi5jb20vY2Fycy9OVEk9L05USldUekF3TURVMU53PT0vL2ltYWdlcy9jbGFzc2ljL0FVREktVFQuMDEuanBlZyZnPTEyJjIwMjYwODI1MTAxMzI3_rct?func=crop&w=480&gravity=auto",
+      "description": "",
+      "found_at": "2026-09-11T10:35:31.364810+00:00",
+      "year": 2010,
+      "posted_at": "2026-09-11"
+    },
     {
       "id": "https://www.autoscout24.fr/offres/audi-tt-3-2-v6-250-quattro-s-line-essence-blanc-cat_ma9mo15627-f6692596-fe5f-4c90-9d5c-f8004cf3aaf9",
       "site": "autoscout24",
