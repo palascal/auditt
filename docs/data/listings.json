@@ -1,7 +1,46 @@
 {
-  "updated_at": "2026-09-11T10:35:43.176652+00:00",
-  "count": 105,
+  "updated_at": "2026-09-12T10:04:05.189063+00:00",
+  "count": 108,
   "items": [
+    {
+      "id": "https://www.autoscout24.fr/offres/audi-tt-roadster-2-0-tfsi-200-s-tronic-bva-essence-noir-cat_ma9mo15627-f7ea7c8c-1f44-43b2-9348-b643f9730cb7",
+      "site": "autoscout24",
+      "site_label": "AutoScout24",
+      "titre": "Audi TT roadster 2.0 tfsi 200 s-tronic bva",
+      "prix": "N/A",
+      "lien": "https://www.autoscout24.fr/offres/audi-tt-roadster-2-0-tfsi-200-s-tronic-bva-essence-noir-cat_ma9mo15627-f7ea7c8c-1f44-43b2-9348-b643f9730cb7",
+      "image": "",
+      "description": "",
+      "found_at": "2026-09-12T10:04:03.793056+00:00",
+      "year": null,
+      "posted_at": "2026-09-12"
+    },
+    {
+      "id": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1289859364A1KVVOAUTT",
+      "site": "paruvendu",
+      "site_label": "ParuVendu",
+      "titre": "Audi TT ROADSTER 2.0 TFSI 272 CH QUARO S-TRONIC BVA / CARPLAY / CA 2009 occasion Mont-de-Marsan 40000",
+      "prix": "N/A",
+      "lien": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1289859364A1KVVOAUTT",
+      "image": "https://img.paruvendu.fr/media_ext/_https_/d2runzreg8rdhh.cloudfront.net/2f/6a/L3ZlaGljbGUtcGhvdG9zLzEwNzkxODUzL0lNRzIwMjYwNzAzMTYyMjE5LSgxKS0xLmpwZz8yMDI2MDgxMzA5NDk0MQ_rct?func=crop&w=480&gravity=auto",
+      "description": "",
+      "found_at": "2026-09-12T10:03:54.549509+00:00",
+      "year": 2009,
+      "posted_at": "2026-09-12"
+    },
+    {
+      "id": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1295283494A1KVVOAUTT",
+      "site": "paruvendu",
+      "site_label": "ParuVendu",
+      "titre": "Audi TT Coupé Quattro 3.2i V6 - BVA Tiptronic COUPE 2007 S 2007 occasion Lognes 77185",
+      "prix": "N/A",
+      "lien": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1295283494A1KVVOAUTT",
+      "image": "https://img.paruvendu.fr/media_ext/_https_/spidervo.s3.fr-par.scw.cloud/21/15/L3Bob3Rvcy9jYmQ5MTE2MmQzNzJjYTk2ZjAwZWI3ZmU0Mzg4MDFiMC9zdG9ja18xNzk5L2ltYWdlXzM2NjM5MDZfMS5qcGc_MjAyNjA5MTIxMTIxMTU_rct?func=crop&w=480&gravity=auto",
+      "description": "",
+      "found_at": "2026-09-12T10:03:54.549168+00:00",
+      "year": 2007,
+      "posted_at": "2026-09-12"
+    },
     {
       "id": "https://www.autoscout24.fr/offres/audi-tt-roadster-2-0-tfsi-200-s-tronic-bva-garantie-6-mois-essence-noir-cat_ma9mo15627-f31d36ad-7a47-47c8-a563-e621655dcaf5",
       "site": "autoscout24",

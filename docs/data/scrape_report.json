@@ -13,8 +13,8 @@
     "ttrs"
   ],
   "purge": {
-    "before": 105,
-    "after": 105,
+    "before": 108,
+    "after": 108,
     "removed_sold": 0,
     "removed_dead": 0,
     "checked": 40
@@ -72,8 +72,8 @@
       "results": 2,
       "inserted": 2,
       "stats": {
-        "seen": 3,
-        "filter": 20,
+        "seen": 8,
+        "filter": 15,
         "price": 0,
         "sold": 0,
         "skip": 0,
@@ -83,5 +83,5 @@
       "error": null
     }
   ],
-  "updated_at": "2026-09-11T10:36:15.198711+00:00"
+  "updated_at": "2026-09-12T10:04:35.490465+00:00"
 }
