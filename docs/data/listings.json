@@ -1,7 +1,20 @@
 {
-  "updated_at": "2026-09-12T10:04:05.189063+00:00",
-  "count": 108,
+  "updated_at": "2026-09-13T11:04:28.225706+00:00",
+  "count": 109,
   "items": [
+    {
+      "id": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1294696056A1KVVOAUTT",
+      "site": "paruvendu",
+      "site_label": "ParuVendu",
+      "titre": "Audi TT Coupé 1.8 TFSI - 160 PHASE 2 2010 occasion Artigues-près-Bordeaux 33370",
+      "prix": "N/A",
+      "lien": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1294696056A1KVVOAUTT",
+      "image": "https://img.paruvendu.fr/media_ext/_https_/spidervo.s3.fr-par.scw.cloud/5e/ed/L3Bob3Rvcy9iZGEzYjU2MzI2ZDdkNWJiZmRkNmViZGE4NWY5NjBhMi9zdG9ja18xMTcxL2ltYWdlXzM2NDE3MTJfMS5qcGc_MjAyNjA4MjgwNzIxNTY_rct?func=crop&w=480&gravity=auto",
+      "description": "",
+      "found_at": "2026-09-13T11:04:19.085141+00:00",
+      "year": 2010,
+      "posted_at": "2026-09-13"
+    },
     {
       "id": "https://www.autoscout24.fr/offres/audi-tt-roadster-2-0-tfsi-200-s-tronic-bva-essence-noir-cat_ma9mo15627-f7ea7c8c-1f44-43b2-9348-b643f9730cb7",
       "site": "autoscout24",
