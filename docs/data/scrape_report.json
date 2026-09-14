@@ -1,7 +1,7 @@
 {
   "scrape_mode": "daily",
-  "total_inserted": 1,
-  "total_telegram": 1,
+  "total_inserted": 0,
+  "total_telegram": 0,
   "year_min": 2006,
   "year_max": 2010,
   "engines": [
@@ -14,9 +14,9 @@
   ],
   "purge": {
     "before": 109,
-    "after": 109,
+    "after": 108,
     "removed_sold": 0,
-    "removed_dead": 0,
+    "removed_dead": 1,
     "checked": 40
   },
   "sites": [
@@ -69,19 +69,19 @@
       "site": "paruvendu",
       "label": "ParuVendu",
       "jobs": 1,
-      "results": 1,
-      "inserted": 1,
+      "results": 0,
+      "inserted": 0,
       "stats": {
-        "seen": 9,
-        "filter": 15,
+        "seen": 6,
+        "filter": 19,
         "price": 0,
         "sold": 0,
         "skip": 0,
-        "ok": 1,
+        "ok": 0,
         "blocked": 0
       },
       "error": null
     }
   ],
-  "updated_at": "2026-09-13T11:04:56.755837+00:00"
+  "updated_at": "2026-09-14T11:45:57.054629+00:00"
 }
