@@ -1,7 +1,20 @@
 {
-  "updated_at": "2026-09-15T11:02:57.914863+00:00",
+  "updated_at": "2026-09-16T10:50:29.735069+00:00",
   "count": 109,
   "items": [
+    {
+      "id": "https://www.autoscout24.fr/offres/audi-tt-ii-2-tfsi-211-s-tronic-6-s-line-automatique-essence-noir-cat_ma9mo15627-45d6e5b5-372d-4d24-8b94-5c32d1c71d52",
+      "site": "autoscout24",
+      "site_label": "AutoScout24",
+      "titre": "Audi TT II 2 TFSI 211 S-Tronic 6 S line - Automatique",
+      "prix": "N/A",
+      "lien": "https://www.autoscout24.fr/offres/audi-tt-ii-2-tfsi-211-s-tronic-6-s-line-automatique-essence-noir-cat_ma9mo15627-45d6e5b5-372d-4d24-8b94-5c32d1c71d52",
+      "image": "",
+      "description": "",
+      "found_at": "2026-09-16T10:49:54.436665+00:00",
+      "year": null,
+      "posted_at": "2026-09-16"
+    },
     {
       "id": "https://www.autoscout24.fr/offres/audi-tt-roadster-2-0-tfsi-200-essence-cat_ma9mo15627-5e85fe66-afb0-4a2f-94cb-4d0cfa8df37e",
       "site": "autoscout24",
@@ -417,19 +430,6 @@
       "found_at": "2026-08-22T06:35:05.046433+00:00",
       "year": 2008,
       "posted_at": "2026-08-22"
-    },
-    {
-      "id": "https://www.autoscout24.fr/offres/audi-tt-coupe-3-2-250cv-quattro-dsg-phare-av-ar-mk3-catback-scrorpion-suivi-complet-garantie-essence-noir-cat_ma9mo15627-50c1ea7e-f6a9-4a5a-8b8f-1b7261da12e5",
-      "site": "autoscout24",
-      "site_label": "AutoScout24",
-      "titre": "Audi TT COUPE 3.2 250CV QUATTRO DSG/ PHARE AV AR MK3/ CATBACK SCRORPION/ SUIVI COMPLET / GARANTIE",
-      "prix": "N/A",
-      "lien": "https://www.autoscout24.fr/offres/audi-tt-coupe-3-2-250cv-quattro-dsg-phare-av-ar-mk3-catback-scrorpion-suivi-complet-garantie-essence-noir-cat_ma9mo15627-50c1ea7e-f6a9-4a5a-8b8f-1b7261da12e5",
-      "image": "",
-      "description": "",
-      "found_at": "2026-08-21T06:41:01.622530+00:00",
-      "year": null,
-      "posted_at": "2026-08-21"
     },
     {
       "id": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1294381516A1KVVOAUTT",

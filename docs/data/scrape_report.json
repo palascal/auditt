@@ -13,10 +13,10 @@
     "ttrs"
   ],
   "purge": {
-    "before": 109,
+    "before": 110,
     "after": 109,
     "removed_sold": 0,
-    "removed_dead": 0,
+    "removed_dead": 1,
     "checked": 40
   },
   "sites": [
@@ -61,7 +61,7 @@
         "seen": 0,
         "ok": 0,
         "skip": 0,
-        "filter": 20
+        "filter": 15
       },
       "error": null
     },
@@ -83,5 +83,5 @@
       "error": null
     }
   ],
-  "updated_at": "2026-09-15T11:03:33.887742+00:00"
+  "updated_at": "2026-09-16T10:50:29.737550+00:00"
 }
