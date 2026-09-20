@@ -1,7 +1,33 @@
 {
-  "updated_at": "2026-09-19T10:18:03.668505+00:00",
-  "count": 113,
+  "updated_at": "2026-09-20T10:36:01.517172+00:00",
+  "count": 115,
   "items": [
+    {
+      "id": "https://www.autoscout24.fr/offres/audi-tt-3-2-v6-250ch-quattro-essence-gris-cat_ma9mo15627-96dcd86b-ae74-4df9-8ca1-8f64a3551a5f",
+      "site": "autoscout24",
+      "site_label": "AutoScout24",
+      "titre": "Audi TT 3.2 V6 250ch quattro",
+      "prix": "N/A",
+      "lien": "https://www.autoscout24.fr/offres/audi-tt-3-2-v6-250ch-quattro-essence-gris-cat_ma9mo15627-96dcd86b-ae74-4df9-8ca1-8f64a3551a5f",
+      "image": "",
+      "description": "",
+      "found_at": "2026-09-20T10:36:01.446423+00:00",
+      "year": null,
+      "posted_at": "2026-09-20"
+    },
+    {
+      "id": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1295515714A1KVVOAUTT",
+      "site": "paruvendu",
+      "site_label": "ParuVendu",
+      "titre": "Audi TT COUPE 2.0 TFSI 270 QUARO S-TRONIC BVA 2008 occasion Andrésy 78570",
+      "prix": "N/A",
+      "lien": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1295515714A1KVVOAUTT",
+      "image": "https://img.paruvendu.fr/media_ext/_https_/cdn2.intuityvo.fr/e5/ab/L3VwbG9hZHMvaW50dWl0eS12by92ZWhpY2xlX3Bob3RvX2VkaXQvdmVoaWNsZV9waG90b19lZGl0XzJkYmNhYzJkLTE5ZWMtNDIxNy1iZjE4LTgxYTM3Nzc2MTM5ZC5qcGc_rct?func=crop&w=480&gravity=auto",
+      "description": "",
+      "found_at": "2026-09-20T10:35:52.990823+00:00",
+      "year": 2008,
+      "posted_at": "2026-09-20"
+    },
     {
       "id": "https://www.autoscout24.fr/offres/audi-tt-quattro-3-2-v6-garantie-12-mois-essence-noir-cat_ma9mo15627-42ceb8b2-635e-4b08-a91d-6bf2eb57d069",
       "site": "autoscout24",
