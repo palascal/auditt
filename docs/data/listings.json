@@ -1,7 +1,20 @@
 {
-  "updated_at": "2026-09-20T10:36:01.517172+00:00",
-  "count": 115,
+  "updated_at": "2026-09-21T11:58:15.672619+00:00",
+  "count": 113,
   "items": [
+    {
+      "id": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1292230561A1KVVOAUTT",
+      "site": "paruvendu",
+      "site_label": "ParuVendu",
+      "titre": "Audi TT 1.8 TFSI 160 2010 occasion Beaupuy 31850",
+      "prix": "N/A",
+      "lien": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1292230561A1KVVOAUTT",
+      "image": "https://img.paruvendu.fr/media_ext/_https_/fsn1.your-objectstorage.com/f2/c9/L2xiYXV0by8xMjY0OTIzMS9jb252ZXJzaW9ucy80NGE2MzNhNS1iMDQwLTQwZjEtODNjMy1kOGM0MWYwZjhkMDUtbGFyZ2UuanBnPzIwMjYwOTIxMDkyODQ1_rct?func=crop&w=480&gravity=auto",
+      "description": "",
+      "found_at": "2026-09-21T11:57:42.882403+00:00",
+      "year": 2010,
+      "posted_at": "2026-09-21"
+    },
     {
       "id": "https://www.autoscout24.fr/offres/audi-tt-3-2-v6-250ch-quattro-essence-gris-cat_ma9mo15627-96dcd86b-ae74-4df9-8ca1-8f64a3551a5f",
       "site": "autoscout24",
@@ -64,19 +77,6 @@
       "image": "",
       "description": "",
       "found_at": "2026-09-17T10:56:58.123987+00:00",
-      "year": null,
-      "posted_at": "2026-09-17"
-    },
-    {
-      "id": "https://www.autoscout24.fr/offres/audi-tt-coupe-3-2-250cv-quattro-dsg-phare-av-ar-mk3-catback-scrorpion-suivi-complet-garantie-essence-noir-cat_ma9mo15627-7512fadf-da4b-4ded-99a9-7dd35a8d95f7",
-      "site": "autoscout24",
-      "site_label": "AutoScout24",
-      "titre": "Audi TT COUPE 3.2 250CV QUATTRO DSG/ PHARE AV AR MK3/ CATBACK SCRORPION/ SUIVI COMPLET / GARANTIE",
-      "prix": "N/A",
-      "lien": "https://www.autoscout24.fr/offres/audi-tt-coupe-3-2-250cv-quattro-dsg-phare-av-ar-mk3-catback-scrorpion-suivi-complet-garantie-essence-noir-cat_ma9mo15627-7512fadf-da4b-4ded-99a9-7dd35a8d95f7",
-      "image": "",
-      "description": "",
-      "found_at": "2026-09-17T10:56:58.123832+00:00",
       "year": null,
       "posted_at": "2026-09-17"
     },
@@ -183,19 +183,6 @@
       "found_at": "2026-09-12T10:03:54.549168+00:00",
       "year": 2007,
       "posted_at": "2026-09-12"
-    },
-    {
-      "id": "https://www.autoscout24.fr/offres/audi-tt-roadster-2-0-tfsi-200-s-tronic-bva-garantie-6-mois-essence-noir-cat_ma9mo15627-f31d36ad-7a47-47c8-a563-e621655dcaf5",
-      "site": "autoscout24",
-      "site_label": "AutoScout24",
-      "titre": "Audi TT roadster 2.0 tfsi 200 s-tronic bva-garantie 6 mois",
-      "prix": "N/A",
-      "lien": "https://www.autoscout24.fr/offres/audi-tt-roadster-2-0-tfsi-200-s-tronic-bva-garantie-6-mois-essence-noir-cat_ma9mo15627-f31d36ad-7a47-47c8-a563-e621655dcaf5",
-      "image": "",
-      "description": "",
-      "found_at": "2026-09-11T10:35:40.303265+00:00",
-      "year": null,
-      "posted_at": "2026-09-11"
     },
     {
       "id": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1295226694A1KVVOAUTT",
@@ -428,19 +415,6 @@
       "image": "",
       "description": "",
       "found_at": "2026-08-27T17:18:42.387552+00:00",
-      "year": null,
-      "posted_at": "2026-08-27"
-    },
-    {
-      "id": "https://www.autoscout24.fr/offres/audi-tt-coupe-2-0-tfsi-200ch-s-tronic-a-carplay-demi-ligne-suivi-essence-blanc-cat_ma9mo15627-9d0cc3d1-d0d0-440c-b9e5-75771d410078",
-      "site": "autoscout24",
-      "site_label": "AutoScout24",
-      "titre": "Audi TT coupe 2.0 tfsi 200ch s-tronic a - carplay demi-ligne suivi",
-      "prix": "N/A",
-      "lien": "https://www.autoscout24.fr/offres/audi-tt-coupe-2-0-tfsi-200ch-s-tronic-a-carplay-demi-ligne-suivi-essence-blanc-cat_ma9mo15627-9d0cc3d1-d0d0-440c-b9e5-75771d410078",
-      "image": "",
-      "description": "",
-      "found_at": "2026-08-27T17:18:42.387419+00:00",
       "year": null,
       "posted_at": "2026-08-27"
     },
