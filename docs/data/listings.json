@@ -1,7 +1,20 @@
 {
-  "updated_at": "2026-09-21T11:58:15.672619+00:00",
-  "count": 113,
+  "updated_at": "2026-09-22T10:57:19.972050+00:00",
+  "count": 114,
   "items": [
+    {
+      "id": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1295576762A1KVVOAUTT",
+      "site": "paruvendu",
+      "site_label": "ParuVendu",
+      "titre": "Audi TT II 2.0 COUPE TFSI 200 - GARANTIE RÉSEAU 2006 occasion Valenciennes 59300",
+      "prix": "N/A",
+      "lien": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1295576762A1KVVOAUTT",
+      "image": "https://img.paruvendu.fr/media_ext/_https_/agence.auto/08/7e/L3dlYmdlc3QvcHJvZC92ZWhpY3VsZS8yMDI2MDgzMTA4NDE1MzE4NjQ5OC02YTk1M2U1MTJkOGU4LmpwZz8yMDI2MDkyMjExMjQ1Mg_rct?func=crop&w=480&gravity=auto",
+      "description": "",
+      "found_at": "2026-09-22T10:57:07.606216+00:00",
+      "year": 2006,
+      "posted_at": "2026-09-22"
+    },
     {
       "id": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1292230561A1KVVOAUTT",
       "site": "paruvendu",
