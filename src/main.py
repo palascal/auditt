@@ -71,8 +71,10 @@ def run():
     total_inserted = 0
     for report in site_reports:
         label = report.get("label", report.get("site"))
-        if report.get("error"):
-            print(f"⚠️ Erreur {label}: {report['error']}")
+        if report.get("error") or report.get("timed_out"):
+            flag = "timeout" if report.get("timed_out") else "erreur"
+            retry = " (retried)" if report.get("retried") else ""
+            print(f"⚠️ {label}: {flag}{retry} — {report.get('error')}")
             continue
         print(
             f"✅ {label}: {report.get('results', 0)} scrapées / "
@@ -117,6 +119,8 @@ def run():
                     "inserted": r.get("inserted"),
                     "stats": r.get("stats"),
                     "error": r.get("error"),
+                    "timed_out": r.get("timed_out"),
+                    "retried": r.get("retried"),
                 }
                 for r in sorted(site_reports, key=lambda x: x.get("site") or "")
             ],
