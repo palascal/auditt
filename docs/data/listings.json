@@ -1,7 +1,46 @@
 {
-  "updated_at": "2026-09-22T10:57:19.972050+00:00",
-  "count": 114,
+  "updated_at": "2026-09-23T10:46:10.737242+00:00",
+  "count": 116,
   "items": [
+    {
+      "id": "https://www.autoscout24.fr/offres/audi-tt-cabriolet-s-line-200cv-essence-gris-cat_ma9mo15627-ead6a380-894e-4368-aa8e-b58fa5517f25",
+      "site": "autoscout24",
+      "site_label": "AutoScout24",
+      "titre": "Audi TT Cabriolet S-line 200cv",
+      "prix": "N/A",
+      "lien": "https://www.autoscout24.fr/offres/audi-tt-cabriolet-s-line-200cv-essence-gris-cat_ma9mo15627-ead6a380-894e-4368-aa8e-b58fa5517f25",
+      "image": "",
+      "description": "",
+      "found_at": "2026-09-23T10:45:20.861864+00:00",
+      "year": null,
+      "posted_at": "2026-09-23"
+    },
+    {
+      "id": "https://www.autoscout24.fr/offres/audi-tt-roadster-2-0-tfsi-200-s-line-s-tronic-bva-essence-noir-cat_ma9mo15627-d9c6755a-c6a5-4953-92b1-a690060be7c3",
+      "site": "autoscout24",
+      "site_label": "AutoScout24",
+      "titre": "Audi TT ROADSTER 2.0 TFSI 200 S-LINE S-TRONIC BVA",
+      "prix": "N/A",
+      "lien": "https://www.autoscout24.fr/offres/audi-tt-roadster-2-0-tfsi-200-s-line-s-tronic-bva-essence-noir-cat_ma9mo15627-d9c6755a-c6a5-4953-92b1-a690060be7c3",
+      "image": "",
+      "description": "",
+      "found_at": "2026-09-23T10:45:20.861765+00:00",
+      "year": null,
+      "posted_at": "2026-09-23"
+    },
+    {
+      "id": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1295592842A1KVVOAUTT",
+      "site": "paruvendu",
+      "site_label": "ParuVendu",
+      "titre": "Audi TT 2.0 TFSI S LINE 2008 occasion Montpellier 34070",
+      "prix": "N/A",
+      "lien": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1295592842A1KVVOAUTT",
+      "image": "https://img.paruvendu.fr/media_ext/_https_/api.sayspilot360.fr/b4/c1/L3N0b3JhZ2UvYWdlbmNpZXMvMzcvdmVoaWNsZXMvMjIwNjYvcGhvdG9zL29yaWdpbmFsL2ltZy05ODEyLmpwZWc_MjAyNjA5MjIyMDIxNDk_rct?func=crop&w=480&gravity=auto",
+      "description": "",
+      "found_at": "2026-09-23T10:45:11.749546+00:00",
+      "year": 2008,
+      "posted_at": "2026-09-23"
+    },
     {
       "id": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1295576762A1KVVOAUTT",
       "site": "paruvendu",
@@ -79,19 +118,6 @@
       "found_at": "2026-09-18T10:32:44.618628+00:00",
       "year": null,
       "posted_at": "2026-09-18"
-    },
-    {
-      "id": "https://www.autoscout24.fr/offres/audi-tt-coupe-1-8-tfsi-160-bvm6-garantie-1-an-essence-blanc-cat_ma9mo15627-00af9399-3b52-4094-941f-e922a3383fc2",
-      "site": "autoscout24",
-      "site_label": "AutoScout24",
-      "titre": "Audi TT COUPE 1.8 TFSI 160 BVM6 GARANTIE 1 AN",
-      "prix": "N/A",
-      "lien": "https://www.autoscout24.fr/offres/audi-tt-coupe-1-8-tfsi-160-bvm6-garantie-1-an-essence-blanc-cat_ma9mo15627-00af9399-3b52-4094-941f-e922a3383fc2",
-      "image": "",
-      "description": "",
-      "found_at": "2026-09-17T10:56:58.123987+00:00",
-      "year": null,
-      "posted_at": "2026-09-17"
     },
     {
       "id": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1290859278A1KVVOAUTT",
