@@ -1,7 +1,20 @@
 {
-  "updated_at": "2026-09-23T10:46:10.737242+00:00",
-  "count": 116,
+  "updated_at": "2026-09-24T11:06:33.509955+00:00",
+  "count": 117,
   "items": [
+    {
+      "id": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1295619929A1KVVOAUTT",
+      "site": "paruvendu",
+      "site_label": "ParuVendu",
+      "titre": "Audi TT 1.8T S line 0 occasion Montfaucon-en-Velay 43290",
+      "prix": "N/A",
+      "lien": "https://www.paruvendu.fr/a/voiture-occasion/audi/tt/1295619929A1KVVOAUTT",
+      "image": "https://img.paruvendu.fr/media_ext/_https_/media.paruvendu.fr/f5/38/L21lZGlhLXBhL1dWMTcvNy85L1dWMTc3OTcwNDMxXzEuanBlZz8yMDI2MDkyMzE1MTIwNw_rct?func=crop&w=480&gravity=auto",
+      "description": "",
+      "found_at": "2026-09-24T11:06:08.453503+00:00",
+      "year": null,
+      "posted_at": "2026-09-24"
+    },
     {
       "id": "https://www.autoscout24.fr/offres/audi-tt-cabriolet-s-line-200cv-essence-gris-cat_ma9mo15627-ead6a380-894e-4368-aa8e-b58fa5517f25",
       "site": "autoscout24",

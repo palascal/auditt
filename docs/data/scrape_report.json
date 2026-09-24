@@ -1,7 +1,7 @@
 {
   "scrape_mode": "daily",
-  "total_inserted": 3,
-  "total_telegram": 3,
+  "total_inserted": 1,
+  "total_telegram": 1,
   "year_min": 2006,
   "year_max": 2010,
   "engines": [
@@ -14,9 +14,9 @@
   ],
   "purge": {
     "before": 117,
-    "after": 116,
+    "after": 117,
     "removed_sold": 0,
-    "removed_dead": 1,
+    "removed_dead": 0,
     "checked": 40
   },
   "sites": [
@@ -24,18 +24,20 @@
       "site": "autoscout24",
       "label": "AutoScout24",
       "jobs": 1,
-      "results": 2,
-      "inserted": 2,
+      "results": 0,
+      "inserted": 0,
       "stats": {
         "seen": 8,
         "filter": 0,
         "price": 0,
         "sold": 0,
         "skip": 0,
-        "ok": 2,
+        "ok": 0,
         "blocked": 0
       },
-      "error": null
+      "error": null,
+      "timed_out": false,
+      "retried": false
     },
     {
       "site": "lacentrale",
@@ -49,7 +51,9 @@
         "skip": 0,
         "filter": 0
       },
-      "error": null
+      "error": null,
+      "timed_out": false,
+      "retried": false
     },
     {
       "site": "leboncoin",
@@ -63,7 +67,9 @@
         "skip": 0,
         "filter": 11
       },
-      "error": null
+      "error": null,
+      "timed_out": false,
+      "retried": false
     },
     {
       "site": "paruvendu",
@@ -72,16 +78,18 @@
       "results": 1,
       "inserted": 1,
       "stats": {
-        "seen": 3,
-        "filter": 21,
+        "seen": 4,
+        "filter": 20,
         "price": 0,
         "sold": 0,
         "skip": 0,
         "ok": 1,
         "blocked": 0
       },
-      "error": null
+      "error": null,
+      "timed_out": false,
+      "retried": false
     }
   ],
-  "updated_at": "2026-09-23T10:46:10.739320+00:00"
+  "updated_at": "2026-09-24T11:07:05.840501+00:00"
 }
