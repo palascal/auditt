@@ -1,7 +1,20 @@
 {
-  "updated_at": "2026-09-25T11:06:58.531687+00:00",
-  "count": 118,
+  "updated_at": "2026-09-26T10:47:40.458268+00:00",
+  "count": 119,
   "items": [
+    {
+      "id": "https://www.autoscout24.fr/offres/audi-tt-2-0-tfsi-200ch-s-line-essence-bleu-cat_ma9mo15627-182d622d-4071-4bb3-8499-251a6cdef0fb",
+      "site": "autoscout24",
+      "site_label": "AutoScout24",
+      "titre": "Audi TT 2.0 TFSI 200CH S LINE",
+      "prix": "N/A",
+      "lien": "https://www.autoscout24.fr/offres/audi-tt-2-0-tfsi-200ch-s-line-essence-bleu-cat_ma9mo15627-182d622d-4071-4bb3-8499-251a6cdef0fb",
+      "image": "",
+      "description": "",
+      "found_at": "2026-09-26T10:47:40.390154+00:00",
+      "year": null,
+      "posted_at": "2026-09-26"
+    },
     {
       "id": "https://www.autoscout24.fr/offres/audi-tt-tt-roadster-2-0-tfsi-200-s-line-s-tronic-a-essence-noir-cat_ma9mo15627-23eb2cd5-f4fa-4ed9-a951-46d867ace6bb",
       "site": "autoscout24",
