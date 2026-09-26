@@ -12,7 +12,6 @@ from scrapekit.runner import run_parallel, scrape_one
 from scrapekit.scrape_mode import get_scrape_mode, purge_head_checks
 
 from results_store import (
-    item_matches_active_filters,
     merge_new_listings,
     purge_invalid_site_links,
     purge_sold_and_dead,
@@ -20,7 +19,6 @@ from results_store import (
 )
 from runtime_config import load_runtime_config, save_runtime_config
 from site_registry import SITE_SPECS, apply_custom_sites, site_labels
-from utils.telegram import send_telegram_message
 
 MAX_WORKERS = 3
 
@@ -80,18 +78,7 @@ def run():
             f"✅ {label}: {report.get('results', 0)} scrapées / "
             f"{report.get('inserted', 0)} ajoutées | stats={report.get('stats')}"
         )
-        for item in report.get("new_items") or []:
-            if not item_matches_active_filters(item):
-                continue
-            year = item.get("year") or ""
-            message = (
-                f"🆕 <b>{label}</b>\n"
-                f"📌 {item.get('titre', 'Audi TT')}\n"
-                f"📅 {year} · 💰 {item.get('prix', 'N/A')}\n"
-                f"🔗 {item.get('lien', '')}"
-            )
-            send_telegram_message(message)
-            total_telegram += 1
+        # Telegram alerts removed — AudiTT no longer notifies.
         total_inserted += int(report.get("inserted") or 0)
 
     checks = purge_head_checks()
@@ -128,8 +115,8 @@ def run():
     )
 
     print(
-        f"🏁 Terminé ({mode}): {total_inserted} ajoutées au dashboard, "
-        f"{total_telegram} alertes Telegram."
+        f"🏁 Terminé ({mode}): {total_inserted} ajoutées au dashboard "
+        f"(Telegram désactivé)."
     )
 
 

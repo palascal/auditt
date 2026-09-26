@@ -13,19 +13,19 @@
   "price_max": 25000,
   "sites": {
     "lacentrale": {
-      "enabled": true,
+      "enabled": false,
       "label": "La Centrale"
     },
     "leboncoin": {
-      "enabled": true,
+      "enabled": false,
       "label": "Leboncoin"
     },
     "autoscout24": {
-      "enabled": true,
+      "enabled": false,
       "label": "AutoScout24"
     },
     "paruvendu": {
-      "enabled": true,
+      "enabled": false,
       "label": "ParuVendu"
     }
   },
